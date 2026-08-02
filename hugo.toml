@@ -104,3 +104,54 @@ title = "隐于雾中"  # 修改为你的站点名称
     enableDNT = true
   [privacy.youtube]
     privacyEnhanced = true
+
+theme = "zahi"
+languageCode = "ar"
+defaultContentLanguage = "ar"
+
+[taxonomies]
+tag = "tags"
+series = "series"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[params]
+description = "وصف موقعك"
+author = "اسمك"
+
+[params.social]
+twitter = "username"
+github = "username"
+linkedin = "username"
+
+[menu]
+[[menu.main]]
+name = "الرئيسية"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "المقالات"
+url = "/posts/"
+weight = 2
+
+[[menu.main]]
+name = "المشاريع"
+url = "/projects/"
+weight = 3
+
+[[menu.main]]
+name = "الوسوم"
+url = "/tags/"
+weight = 4
+
+[[menu.main]]
+name = "السلاسل"
+url = "/series/"
+weight = 5
+
+[[menu.main]]
+name = "الشبكة"
+url = "/graph/"
+weight = 6
