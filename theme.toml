@@ -1,0 +1,51 @@
+name = "Zahi"
+license = "MIT"
+licenselink = "https://github.com/mohamedelhefni/zahi/blob/main/LICENSE"
+description = "A modern Arabic RTL Hugo theme designed as a digital garden with Obsidian-like features including wiki-links, knowledge graph, backlinks, and series support."
+homepage = "https://github.com/mohamedelhefni/zahi"
+demosite = "https://zahi.netlify.app/"
+
+tags = [
+    "blog",
+    "responsive",
+    "clean",
+    "minimal",
+    "light",
+    "dark",
+    "rtl",
+    "arabic",
+    "digital-garden",
+    "knowledge-base",
+    "personal",
+]
+
+features = [
+    "responsive",
+    "dark mode",
+    "light mode",
+    "RTL support",
+    "Arabic optimized",
+    "wiki-links",
+    "knowledge graph",
+    "backlinks",
+    "series support",
+    "table of contents",
+    "syntax highlighting",
+    "search",
+    "tags",
+    "social icons",
+    "reading time",
+    "Disqus comments",
+]
+
+min_version = "0.112.0"
+
+[author]
+name = "Mohamed Elhefni"
+homepage = "https://github.com/mohamedelhefni"
+
+[original]
+name = "Zahi"
+author = "Mohamed Elhefni"
+homepage = "https://github.com/mohamedelhefni"
+repo = "https://github.com/mohamedelhefni/zahi"
