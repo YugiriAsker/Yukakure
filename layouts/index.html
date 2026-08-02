@@ -6,15 +6,15 @@
     <!-- Greeting -->
     <p class="text-stone-500 dark:text-stone-400">
       <span class="animate-wave inline-block ml-1">👋</span>
-      أهلاً بك
+      你好！
     </p>
 
-    <!-- Title -->
+    <!-- Title标题 -->
     <h1 class="text-3xl md:text-4xl font-semibold text-stone-900 dark:text-stone-100 leading-tight">
       {{ .Title }}
     </h1>
 
-    <!-- Description -->
+    <!-- Description描述 -->
     <p class="text-stone-600 dark:text-stone-400 leading-relaxed max-w-xl">
       {{ .Description }}
     </p>
@@ -26,7 +26,7 @@
   </div>
 </section>
 
-<!-- Stats Section -->
+<!-- Stats Section统计区开始 -->
 <section class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-12">
   {{ $posts := where .Site.RegularPages "Section" "posts" }}
   {{ $tags := .Site.Taxonomies.tags }}
@@ -35,37 +35,37 @@
   <div class="stat-card">
     <div class="stat-icon">📝</div>
     <div class="stat-number">{{ len $posts }}</div>
-    <div class="stat-label">مقالة</div>
+    <div class="stat-label">文章</div>
   </div>
 
   <div class="stat-card">
     <div class="stat-icon">📚</div>
     <div class="stat-number">{{ len $series }}</div>
-    <div class="stat-label">سلسلة</div>
+    <div class="stat-label">系列</div>
   </div>
 
   <div class="stat-card">
     <div class="stat-icon">🏷️</div>
     <div class="stat-number">{{ len $tags }}</div>
-    <div class="stat-label">تصنيف</div>
+    <div class="stat-label">分类</div>
   </div>
 
   <div class="stat-card">
     <div class="stat-icon">🔗</div>
     <div class="stat-number">{{ len .Site.RegularPages }}</div>
-    <div class="stat-label">صفحة</div>
+    <div class="stat-label">页面</div>
   </div>
 </section>
 
-<!-- Series Section -->
+<!-- Series Section系列和切片？ -->
 {{ if $series }}
 <section class="mb-12">
   <div class="flex items-center justify-between mb-6">
     <h2 class="text-lg font-semibold text-stone-900 dark:text-stone-100">
-      السلاسل التعليمية
+      教学系列
     </h2>
     <a href="/series/" class="text-sm text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100 transition-colors">
-      عرض الكل ←
+      查看全部 ←
     </a>
   </div>
 
@@ -105,14 +105,14 @@
 </section>
 {{ end }}
 
-<!-- Recent Posts -->
+<!-- Recent Posts最新文章区 -->
 <section class="mb-12">
   <div class="flex items-center justify-between mb-6">
     <h2 class="text-lg font-semibold text-stone-900 dark:text-stone-100">
-      أحدث المقالات
+      最新文章
     </h2>
     <a href="/posts/" class="text-sm text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100 transition-colors">
-      عرض الكل ←
+      查看全部 ←
     </a>
   </div>
 
@@ -141,14 +141,14 @@
   </div>
 </section>
 
-<!-- Graph Section -->
+<!-- Graph Section知识图谱 -->
 <section class="mb-12">
   <div class="flex items-center justify-between mb-6">
     <h2 class="text-lg font-semibold text-stone-900 dark:text-stone-100">
-      خريطة المعرفة
+      知识图谱
     </h2>
     <a href="/graph/" class="text-sm text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100 transition-colors">
-      عرض كامل ←
+      查看全部 ←
     </a>
   </div>
 
@@ -212,7 +212,7 @@
       });
 
       if (nodes.length === 0) {
-        container.innerHTML = '<p class="text-center text-stone-500 py-8">لا توجد صفحات بعد</p>';
+        container.innerHTML = '<p class="text-center text-stone-500 py-8">还没有页面</p>';
         return;
       }
 
@@ -294,10 +294,10 @@
   </div>
 </section>
 
-<!-- Tags Cloud -->
+<!-- Tags Cloud标签云 -->
 <section class="mb-12">
   <h2 class="text-lg font-semibold text-stone-900 dark:text-stone-100 mb-6">
-    المواضيع
+    主题
   </h2>
 
   <div class="flex flex-wrap gap-2">
