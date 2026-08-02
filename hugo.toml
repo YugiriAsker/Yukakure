@@ -105,53 +105,33 @@ title = "隐于雾中"  # 修改为你的站点名称
   [privacy.youtube]
     privacyEnhanced = true
 
-theme = "zahi"
-languageCode = "ar"
-defaultContentLanguage = "ar"
-
-[taxonomies]
-tag = "tags"
-series = "series"
-
-[outputs]
-home = ["HTML", "RSS", "JSON"]
-
-[params]
-description = "وصف موقعك"
-author = "اسمك"
-
-[params.social]
-twitter = "username"
-github = "username"
-linkedin = "username"
-
 [menu]
 [[menu.main]]
-name = "الرئيسية"
+name = "主页"
 url = "/"
 weight = 1
 
 [[menu.main]]
-name = "المقالات"
+name = "文章"
 url = "/posts/"
 weight = 2
 
 [[menu.main]]
-name = "المشاريع"
+name = "项目"
 url = "/projects/"
 weight = 3
 
 [[menu.main]]
-name = "الوسوم"
+name = "标签"
 url = "/tags/"
 weight = 4
 
 [[menu.main]]
-name = "السلاسل"
+name = "系列"
 url = "/series/"
 weight = 5
 
 [[menu.main]]
-name = "الشبكة"
+name = "关系图"
 url = "/graph/"
 weight = 6
