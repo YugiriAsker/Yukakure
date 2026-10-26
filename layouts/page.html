@@ -31,7 +31,7 @@
 
 				<span aria-hidden="true">//</span>
 				{{ $plainText := .Plain | plainify | replaceRE "\\s+" "" }}
-{{ $charCount := len (strings.RuneCount $plainText) }}
+{{ $charCount := strings.RuneCount $plainText }}
 <span>{{ $charCount }} {{ i18n "words" }}</span>
 
 				<span aria-hidden="true">//</span>
