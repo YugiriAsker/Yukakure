@@ -3,7 +3,7 @@ title: ThinAir
 date: 2026-05-11
 description: 更零碎的碎碎念……
 icon: fa-solid fa-wand-magic-sparkles
-accent: purple
+accent: lavender
 status: active
 tags:
   - Misskey
