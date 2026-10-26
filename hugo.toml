@@ -34,10 +34,10 @@ title = "Yukakure"
 [languages.zh-cn.params]
 author = "Yukakure"
 descriptionLines = [
-  "记录生活、技术与灵感。",
-  "分享我的文章、项目与日常思考。",
+  "撕裂有时，缝补有时；静默有时，言语有时；",
+  "喜爱有时，恨恶有时；争战有时，和好有时。",
 ]
-tagline = "欢迎来到我的小站，阅读我的[文章](/posts/)与[项目](/projects/)。"
+tagline = "你好，我是来，这是我的[日常](/posts/)与[猫箱](/projects/)♪︎"
 
 [languages.zh-cn.params.footer]
 text = 'Yukakure // 由 [Hugo](https://gohugo.io/) 驱动 // 使用 [Rewired](https://github.com/RigleGit/rewired) 主题'
