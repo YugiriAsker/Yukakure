@@ -3,6 +3,4 @@ title: "About"
 description: "Sample static page."
 ---
 
-# About
-
-This is a static sample page to test regular page layouts.
+ʢᴗ.ᴗʡ ᶻ 𝗓 𐰁...

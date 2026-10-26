@@ -3,8 +3,6 @@ title: "Home"
 description: "Rewired theme demo."
 ---
 
-# Rewired
+# Yukakure
 
-A dark, minimal, terminal-inspired Hugo theme.
-
-This demo tests the homepage, navigation, blog, projects, taxonomies, and base styles.
+ ʢᴗ.ᴗʡ ᶻ 𝗓 𐰁
