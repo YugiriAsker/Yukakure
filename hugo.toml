@@ -73,6 +73,11 @@ name = "GitHub"
 url = "https://github.com/YugiriAsker/Yukakure"
 icon = "fa-brands fa-github"
 
+[[languages.zh-cn.params.subnodes]]
+name = "docs.example.org"
+url = "https://temperance.vercel.app/"
+description = "同人站~"
+
 # 以下社交链接按需启用。
 # 将 URL 替换成你自己的真实地址后再取消注释。
 
