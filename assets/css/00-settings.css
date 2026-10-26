@@ -1,8 +1,8 @@
 :root {
-  --bg: #131824;
-  --bg-deep: #131824;
-  --bg-soft: #2b333e;
-  --line: rgba(139, 146, 184, 0.28);
+  --bg: #05111E
+  --bg-deep: #000612;
+  --bg-soft: #1C2938;
+  --line: rgba(89, 104, 121, 0.28);
 
   --text: #eef7f2;
   --muted: #6B8E99;
