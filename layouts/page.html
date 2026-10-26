@@ -30,10 +30,16 @@
 				<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 
 				<span aria-hidden="true">//</span>
-				<span>{{ .WordCount }} {{ i18n "words" }}</span>
+				{{ $plainText := .Plain | plainify | replaceRE "\\s+" "" }}
+{{ $charCount := len (strings.RuneCount $plainText) }}
+<span>{{ $charCount }} {{ i18n "words" }}</span>
 
 				<span aria-hidden="true">//</span>
-				<span>{{ .ReadingTime }} {{ i18n "minutes" }}</span>
+				{{ $readingMinutes := div (add $charCount 399) 400 }}
+{{ if lt $readingMinutes 1 }}
+    {{ $readingMinutes = 1 }}
+{{ end }}
+<span>{{ $readingMinutes }} {{ i18n "minutes" }}</span>
 			</div>
 		{{ end }}
 
