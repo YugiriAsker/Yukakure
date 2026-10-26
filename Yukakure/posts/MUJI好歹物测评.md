@@ -5,7 +5,7 @@ description: 怎么有muji粉丝啊（并不是
 tags:
   - MUJI
 categories:
-  - 生活
+  - shenghuo
 draft: false
 ---
 把之前写的贴过来然后又补充了一些，本来想额外再做一个生活站，但最近实在没什么力气，搁置太久了，可博客还是得写的……
