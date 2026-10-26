@@ -1,6 +1,6 @@
 ---
 title: MUJI好歹物测评
-date: 2026-10-26
+date: 2026-10-27
 description: 怎么有muji粉丝啊（并不是
 tags:
   - MUJI

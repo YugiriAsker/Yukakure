@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "about.md",
+                "file": "posts/MUJI好歹物测评.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "about"
+              "title": "MUJI好歹物测评"
             }
           }
         ]
@@ -187,14 +187,14 @@
   },
   "active": "e6946a804395fc68",
   "lastOpenFiles": [
-    "_index.md",
+    "posts/是来哟.md",
+    "projects/Asylum.md",
+    "projects/_index.md",
     "about.md",
+    "_index.md",
     "projects/ThinAir.md",
     "projects/Holy.md",
-    "projects/_index.md",
-    "projects/Asylum.md",
     "posts/_index.md",
-    "posts/是来哟.md",
     "posts/MUJI好歹物测评.md",
     "2026-05-10.md",
     "posts/math-and-technical-notes.md",
