@@ -1,9 +1,10 @@
-baseURL = "https://example.org/"
-title = "rewired"
+baseURL = "https://yukakure.vercel.app/"
+title = "隐于雾中"
 theme = "rewired"
 
-defaultContentLanguage = "es"
+defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
+hasCJKLanguage = true
 
 [taxonomies]
 tag = "tags"
@@ -18,152 +19,75 @@ ordered = true
 startLevel = 1
 endLevel = 3
 
-[languages]
-
-[languages.es]
-label = "Español"
-locale = "es-ES"
+[languages.zh-cn]
+label = "简体中文"
+locale = "zh-CN"
 weight = 1
-contentDir = "content/es"
-title = "Mi web"
+contentDir = "content"
+title = "Yukakure"
 
-[languages.es.params]
-author = "Tu nombre"
+[languages.zh-cn.params]
+author = "Yukakure"
 descriptionLines = [
-  "Una descripción corta de tu web,",
-  "tu trabajo, tus proyectos o tus intereses.",
+  "记录生活、技术与灵感。",
+  "分享我的文章、项目与日常思考。",
 ]
-tagline = "Escribo en el [blog](/posts/), comparto [proyectos](/projects/) y envío una [newsletter](/newsletter/)."
+tagline = "欢迎来到我的小站，阅读我的[文章](/posts/)与[项目](/projects/)。"
 
-[languages.es.params.footer]
-text = 'miweb.dev // hecho con ♥ y [Hugo](https://gohugo.io/) // tema [rewired](https://github.com/RigleGit/rewired)'
-prompt = "user@miweb.dev:~$"
+[languages.zh-cn.params.footer]
+text = 'Yukakure // 由 [Hugo](https://gohugo.io/) 驱动 // 使用 [Rewired](https://github.com/RigleGit/rewired) 主题'
+prompt = "yukakure:~$"
 
-[[languages.es.menus.main]]
-name = "home"
+[[languages.zh-cn.menus.main]]
+name = "首页"
 pageRef = "/"
 weight = 10
 
-[[languages.es.menus.main]]
-name = "blog"
+[[languages.zh-cn.menus.main]]
+name = "文章"
 pageRef = "/posts"
 weight = 20
 
-[[languages.es.menus.main]]
-name = "proyectos"
+[[languages.zh-cn.menus.main]]
+name = "项目"
 pageRef = "/projects"
 weight = 30
 
-[[languages.es.menus.main]]
-name = "about"
+[[languages.zh-cn.menus.main]]
+name = "关于"
 pageRef = "/about"
 weight = 40
 
-[[languages.es.menus.main]]
-name = "contact"
+[[languages.zh-cn.menus.main]]
+name = "联系"
 pageRef = "/contact"
 weight = 50
 
-[[languages.es.params.social]]
+[[languages.zh-cn.params.social]]
 name = "GitHub"
-url = "https://github.com/usuario"
+url = "https://github.com/YugiriAsker/Yukakure"
 icon = "fa-brands fa-github"
 
-[[languages.es.params.social]]
-name = "YouTube"
-url = "https://youtube.com/@usuario"
-icon = "fa-brands fa-youtube"
+# 以下社交链接按需启用。
+# 将 URL 替换成你自己的真实地址后再取消注释。
 
-[[languages.es.params.social]]
-name = "Newsletter"
-url = "https://example.org/newsletter/"
-icon = "fa-solid fa-newspaper"
+# [[languages.zh-cn.params.social]]
+# name = "YouTube"
+# url = "https://youtube.com/@yourname"
+# icon = "fa-brands fa-youtube"
 
-[[languages.es.params.social]]
-name = "Email"
-url = "mailto:hello@example.org"
-icon = "fa-regular fa-envelope"
+# [[languages.zh-cn.params.social]]
+# name = "Email"
+# url = "mailto:hello@example.org"
+# icon = "fa-regular fa-envelope"
 
-[[languages.es.params.subnodes]]
-name = "docs.example.org"
-url = "https://docs.example.org"
-description = "Documentación, apuntes o recursos técnicos."
+# 子站点：有自己的文档站、实验室或其他项目网站时再启用。
+# [[languages.zh-cn.params.subnodes]]
+# name = "docs.example.org"
+# url = "https://docs.example.org"
+# description = "文档、笔记或技术资料。"
 
-[[languages.es.params.subnodes]]
-name = "lab.example.org"
-url = "https://lab.example.org"
-description = "Experimentos, prototipos y proyectos secundarios."
-
-[languages.en]
-label = "English"
-locale = "en-US"
-weight = 2
-contentDir = "content/en"
-title = "My website"
-
-[languages.en.params]
-author = "Your name"
-descriptionLines = [
-  "A short description of your website,",
-  "your work, projects, or interests.",
-]
-tagline = "I write on the [blog](/en/posts/), share [projects](/en/projects/), and send a [newsletter](/en/newsletter/)."
-
-[languages.en.params.footer]
-text = 'mywebsite.dev // made with ♥ and [Hugo](https://gohugo.io/) // theme [rewired](https://github.com/RigleGit/rewired)'
-prompt = "user@mywebsite.dev:~$"
-
-[[languages.en.menus.main]]
-name = "home"
-pageRef = "/"
-weight = 10
-
-[[languages.en.menus.main]]
-name = "blog"
-pageRef = "/posts"
-weight = 20
-
-[[languages.en.menus.main]]
-name = "projects"
-pageRef = "/projects"
-weight = 30
-
-[[languages.en.menus.main]]
-name = "about"
-pageRef = "/about"
-weight = 40
-
-[[languages.en.menus.main]]
-name = "contact"
-pageRef = "/contact"
-weight = 50
-
-[[languages.en.params.social]]
-name = "GitHub"
-url = "https://github.com/user"
-icon = "fa-brands fa-github"
-
-[[languages.en.params.social]]
-name = "YouTube"
-url = "https://youtube.com/@user"
-icon = "fa-brands fa-youtube"
-
-[[languages.en.params.social]]
-name = "Newsletter"
-url = "https://example.org/newsletter/"
-icon = "fa-solid fa-newspaper"
-
-[[languages.en.params.social]]
-name = "Email"
-url = "mailto:hello@example.org"
-icon = "fa-regular fa-envelope"
-
-[[languages.en.params.subnodes]]
-name = "docs.example.org"
-url = "https://docs.example.org"
-description = "Documentation, notes, or technical resources."
-
-[[languages.en.params.subnodes]]
-name = "lab.example.org"
-url = "https://lab.example.org"
-description = "Experiments, prototypes, and side projects."
+# [[languages.zh-cn.params.subnodes]]
+# name = "lab.example.org"
+# url = "https://lab.example.org"
+# description = "实验、原型与其他项目。"
