@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -23,13 +24,12 @@ body {
   color: var(--text);
   font-family:
     "Fira Code",
-    ui-monospace,
-    SFMono-Regular,
-    Menlo,
-    Monaco,
-    Consolas,
-    "Liberation Mono",
-    monospace;
+font-family:
+  "Fira Code",
+  "Noto Sans SC",
+  "Microsoft YaHei",
+  "PingFang SC",
+  sans-serif;
   line-height: 1.65;
 }
 
