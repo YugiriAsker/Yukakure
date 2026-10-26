@@ -2,3 +2,97 @@
   [module.hugoVersion]
     extended = false
     min = "0.160.0"
+
+baseURL = "https://yukakure.vercel.app/"
+title = "隐于雾中"
+theme = "rewired"
+
+defaultContentLanguage = "zh-cn"
+defaultContentLanguageInSubdir = false
+hasCJKLanguage = true
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[params]
+blogPageSize = 5
+
+[params.toc]
+enabled = true
+ordered = true
+startLevel = 1
+endLevel = 3
+
+[languages.zh-cn]
+label = "简体中文"
+locale = "zh-CN"
+weight = 1
+contentDir = "content"
+title = "Yukakure"
+
+[languages.zh-cn.params]
+author = "Yukakure"
+descriptionLines = [
+  "记录生活、技术与灵感。",
+  "分享我的文章、项目与日常思考。",
+]
+tagline = "欢迎来到我的小站，阅读我的[文章](/posts/)与[项目](/projects/)。"
+
+[languages.zh-cn.params.footer]
+text = 'Yukakure // 由 [Hugo](https://gohugo.io/) 驱动 // 使用 [Rewired](https://github.com/RigleGit/rewired) 主题'
+prompt = "yukakure:~$"
+
+[[languages.zh-cn.menus.main]]
+name = "首页"
+pageRef = "/"
+weight = 10
+
+[[languages.zh-cn.menus.main]]
+name = "文章"
+pageRef = "/posts"
+weight = 20
+
+[[languages.zh-cn.menus.main]]
+name = "项目"
+pageRef = "/projects"
+weight = 30
+
+[[languages.zh-cn.menus.main]]
+name = "关于"
+pageRef = "/about"
+weight = 40
+
+[[languages.zh-cn.menus.main]]
+name = "联系"
+pageRef = "/contact"
+weight = 50
+
+[[languages.zh-cn.params.social]]
+name = "GitHub"
+url = "https://github.com/YugiriAsker/Yukakure"
+icon = "fa-brands fa-github"
+
+# 以下社交链接按需启用。
+# 将 URL 替换成你自己的真实地址后再取消注释。
+
+# [[languages.zh-cn.params.social]]
+# name = "YouTube"
+# url = "https://youtube.com/@yourname"
+# icon = "fa-brands fa-youtube"
+
+# [[languages.zh-cn.params.social]]
+# name = "Email"
+# url = "mailto:hello@example.org"
+# icon = "fa-regular fa-envelope"
+
+# 子站点：有自己的文档站、实验室或其他项目网站时再启用。
+# [[languages.zh-cn.params.subnodes]]
+# name = "docs.example.org"
+# url = "https://docs.example.org"
+# description = "文档、笔记或技术资料。"
+
+# [[languages.zh-cn.params.subnodes]]
+# name = "lab.example.org"
+# url = "https://lab.example.org"
+# description = "实验、原型与其他项目。"
