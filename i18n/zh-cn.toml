@@ -1,0 +1,89 @@
+[subnodes]
+other = "子站点"
+
+[latest_posts]
+other = "最新文章"
+
+[projects]
+other = "项目"
+
+[no_posts]
+other = "暂时还没有发布文章。"
+
+[no_projects]
+other = "暂时还没有发布项目。"
+
+[tags]
+other = "标签"
+
+[categories]
+other = "分类"
+
+[back_to_blog]
+other = "返回博客"
+
+[words]
+other = "字"
+
+[minutes]
+other = "分钟"
+
+[contents]
+other = "目录"
+
+[read_next]
+other = "接下来阅读"
+
+[project_filters]
+other = "项目筛选"
+
+[show]
+other = "显示"
+
+[filter_all]
+other = "全部"
+
+[status_active]
+other = "进行中"
+
+[status_paused]
+other = "已暂停"
+
+[status_completed]
+other = "已完成"
+
+[blog_filters]
+other = "文章筛选"
+
+[blog_sidebar]
+other = "文章侧栏"
+
+[filter_by]
+other = "筛选条件"
+
+[search]
+other = "搜索"
+
+[search_posts]
+other = "搜索文章"
+
+[search_placeholder]
+other = "搜索文章..."
+
+[archive]
+other = "归档"
+
+[no_matching_posts]
+other = "没有符合当前筛选条件的文章。"
+
+[pagination]
+other = "分页"
+
+[all_years]
+other = "所有年份"
+
+[skip_to_content]
+other = "跳转到正文"
+
+[no_terms]
+other = "暂时还没有内容。"
