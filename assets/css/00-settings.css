@@ -26,22 +26,22 @@
 html[data-theme="light"] {
   color-scheme: light;
 
-  --bg: #F4F1EA;
-  --bg-deep: #E7E2D8;
-  --bg-soft: #FFFFFF;
+  --bg: #E2E9F1;
+  --bg-deep: #E0E7EF;
+  --bg-soft: #EEF5FD;
   --line: rgba(45, 55, 65, 0.25);
 
   --text: #263238;
   --muted: #64747A;
   --muted-soft: #50585B;
 
-  --cyan: #345B70;
-  --green: #54775B;
-  --orange: #9A6829;
+  --cyan: #1D3F5A;
+  --green: #759F9A;
+  --orange: #986524;
   --pink: #A45F78;
-  --purple: #786581;
-  --red: #B64F49;
-  --yellow: #927B32;
+  --purple: #74759b;
+  --red: #9a8878;
+  --yellow: #b7ae8f;
 }
 
 /* 浅色模式下，页面背景同步变亮 */
