@@ -1,152 +1,156 @@
-baseURL = "https://zahi.netlify.app/"
-title = "زاهي"
-languageCode = "ar"
-defaultContentLanguage = "ar"
+baseURL = "https://riglegit.github.io/rewired/"
+title = "Rewired"
+theme = "rewired"
+themesDir = "../.."
 
-# Enable useful features
-enableRobotsTXT = false
-enableEmoji = true
-enableGitInfo = true
+defaultContentLanguage = "es"
+defaultContentLanguageInSubdir = false
 
-# Outputs
-[outputs]
-home = ["HTML", "RSS", "JSON"]
-section = ["HTML", "RSS"]
-taxonomy = ["HTML", "RSS"]
-term = ["HTML", "RSS"]
-
-# Taxonomies
 [taxonomies]
-tag = "tags"
-series = "series"
+  tag = "tags"
+  category = "categories"
 
-# Sitemap
-[sitemap]
-changefreq = "weekly"
-priority = 0.5
-filename = "sitemap.xml"
+[pagination]
+  pagerSize = 10
 
-# Hugo Modules
-[module]
-  [[module.imports]]
-    path = "github.com/mohamedelhefni/zahi"
-    
-  [[module.mounts]]
-    source = "content"
-    target = "content"
-    
-  [[module.mounts]]
-    source = "static"
-    target = "static"
-
-# Navigation Menu
-[menu]
-[[menu.main]]
-identifier = "home"
-name = "الرئيسية"
-url = "/"
-weight = 10
-
-[[menu.main]]
-identifier = "posts"
-name = "المدونه"
-url = "/posts"
-weight = 20
-
-[[menu.main]]
-identifier = "series"
-name = "السلاسل"
-url = "/series"
-weight = 25
-
-[[menu.main]]
-identifier = "projects"
-name = "المشاريع"
-url = "/projects"
-weight = 27
-
-[[menu.main]]
-identifier = "graph"
-name = "الخريطة"
-url = "/graph"
-weight = 30
-
-# Site Parameters
 [params]
-# Site Info
-description = "زاهي - قالب هوجو عربي حديث مصمم كحديقة رقمية مع مميزات شبيهة بـ Obsidian"
-author = "محمد الحفني"
-keywords = ["مدونة", "برمجة", "تقنية", "عربي", "حديقة رقمية"]
+  blogPageSize = 5
 
-# Social links (shown in footer)
-github = "https://www.github.com/mohamedelhefni"
-mail = "mailto:mohamed.elhefni@outlook.com"
-site = "https://hefni101.netlify.app/"
+[params.toc]
+  enabled = true
+  ordered = false
+  startLevel = 1
+  endLevel = 3
 
-# Social handles (for Twitter Cards)
-[params.social]
-twitter = "mohamedelhefni"
-github = "mohamedelhefni"
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
 
-# Open Graph default image (place in static/images/)
-# ogImage = "images/og-default.png"
+[languages]
 
-# Site verification (optional)
-# [params.verification]
-# google = "your-google-verification-code"
-# bing = "your-bing-verification-code"
+[languages.es]
+  label = "Español"
+  locale = "es-ES"
+  weight = 1
+  contentDir = "content/es"
+  title = "Rewired"
 
-# Analytics (optional)
-[params.analytics]
-#   [params.analytics.google]
-#     id = "G-XXXXXXXXXX"
-#   [params.analytics.plausible]
-#     domain = "zahi.netlify.app"
-  [params.analytics.siraaj]
-    apiUrl = "https://siraaj.live"
-    projectId = "zahi"
-    autoTrack = true
+[languages.es.params]
+  author = "Rodrigo Iglesias"
+  descriptionLines = [
+    "Un tema oscuro, mínimo y con estética terminal.",
+    "Pensado para blogs personales, proyectos y portfolios técnicos.",
+  ]
+  tagline = "Escribo en el [blog](/posts/), comparto [proyectos](/projects/) y mantengo una web personal sencilla."
 
-# Disqus comments (optional)
-# [services]
-# [services.disqus]
-# shortname = 'your-disqus-shortname'
+[languages.es.params.footer]
+  text = 'rewired // hecho con ♥ y [Hugo](https://gohugo.io/)'
+  prompt = "user@rewired:~$"
 
-# Related content
-[related]
-includeNewer = true
-threshold = 80
-toLower = true
-[[related.indices]]
-  name = "tags"
-  weight = 100
-[[related.indices]]
-  name = "series"
-  weight = 80
-[[related.indices]]
-  name = "date"
+[[languages.es.menus.main]]
+  name = "home"
+  pageRef = "/"
   weight = 10
 
-# Markup settings
+[[languages.es.menus.main]]
+  name = "blog"
+  pageRef = "/posts"
+  weight = 20
+
+[[languages.es.menus.main]]
+  name = "proyectos"
+  pageRef = "/projects"
+  weight = 30
+
+[[languages.es.menus.main]]
+  name = "about"
+  pageRef = "/about"
+  weight = 40
+
+[[languages.es.params.social]]
+  name = "GitHub"
+  url = "https://github.com/RigleGit/rewired"
+  icon = "fa-brands fa-github"
+
+[[languages.es.params.social]]
+  name = "Web"
+  url = "https://rigle.dev"
+  icon = "fa-solid fa-globe"
+
+[[languages.es.params.subnodes]]
+  name = "rigle.dev"
+  url = "https://rigle.dev"
+  description = "Web personal"
+
+[[languages.es.params.subnodes]]
+  name = "github.com/RigleGit"
+  url = "https://github.com/RigleGit"
+  description = "Código y proyectos"
+
+[languages.en]
+  label = "English"
+  locale = "en-US"
+  weight = 2
+  contentDir = "content/en"
+  title = "Rewired"
+
+[languages.en.params]
+  author = "Rodrigo Iglesias"
+  descriptionLines = [
+    "A dark, minimal, terminal-inspired Hugo theme.",
+    "Built for personal blogs, projects, and technical portfolios.",
+  ]
+  tagline = "I write on the [blog](/en/posts/), share [projects](/en/projects/), and keep a simple personal website."
+
+[languages.en.params.footer]
+  text = 'rewired // made with ♥ and [Hugo](https://gohugo.io/)'
+  prompt = "user@rewired:~$"
+
+[[languages.en.menus.main]]
+  name = "home"
+  pageRef = "/"
+  weight = 10
+
+[[languages.en.menus.main]]
+  name = "blog"
+  pageRef = "/posts"
+  weight = 20
+
+[[languages.en.menus.main]]
+  name = "projects"
+  pageRef = "/projects"
+  weight = 30
+
+[[languages.en.menus.main]]
+  name = "about"
+  pageRef = "/about"
+  weight = 40
+
+[[languages.en.params.social]]
+  name = "GitHub"
+  url = "https://github.com/RigleGit/rewired"
+  icon = "fa-brands fa-github"
+
+[[languages.en.params.social]]
+  name = "Website"
+  url = "https://rigle.dev"
+  icon = "fa-solid fa-globe"
+
+[[languages.en.params.subnodes]]
+  name = "rigle.dev"
+  url = "https://rigle.dev"
+  description = "Rodrigo's personal web"
+
+[[languages.en.params.subnodes]]
+  name = "github.com/RigleGit"
+  url = "https://github.com/RigleGit"
+  description = "Code and projects"
+
 [markup]
   [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    noClasses = false
-    style = "dracula"
-  [markup.tableOfContents]
-    endLevel = 4
-    startLevel = 2
-
-# Privacy (GDPR)
-[privacy]
-  [privacy.googleAnalytics]
-    anonymizeIP = true
-    respectDoNotTrack = true
-  [privacy.x]
-    enableDNT = true
-  [privacy.youtube]
-    privacyEnhanced = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]

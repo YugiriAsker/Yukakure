@@ -1,2 +1,4 @@
-public
-node_modules
+exampleSite/public/
+.hugo_build.lock
+resources/_gen/
+.DS_Store
