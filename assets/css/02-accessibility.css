@@ -4,7 +4,7 @@
   top: 1rem;
   z-index: 100;
   transform: translateY(-200%);
-  background: var(--pink);
+  background: var(--cyan);
   color: var(--bg-deep);
   padding: 0.5rem 0.75rem;
   border-radius: 0.25rem;

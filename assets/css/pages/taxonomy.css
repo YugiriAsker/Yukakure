@@ -15,7 +15,7 @@
 .taxonomy-title,
 .term-title {
   margin: 0;
-  color: var(--pink);
+  color: var(--cyan);
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: 1;
   letter-spacing: -0.06em;
@@ -64,12 +64,12 @@
 }
 
 .taxonomy-row__arrow {
-  color: var(--pink);
+  color: var(--cyan);
 }
 
 .taxonomy-row:hover .taxonomy-row__name,
 .taxonomy-row:hover .taxonomy-row__arrow {
-  color: var(--pink);
+  color: var(--cyan);
 }
 
 /* Term page: /tags/hugo/, /categories/tutoriales/ */
@@ -116,7 +116,7 @@
 }
 
 .term-card__title {
-  color: var(--pink);
+  color: var(--cyan);
   font-weight: 700;
 }
 
@@ -134,7 +134,7 @@
 }
 
 .term-card__arrow {
-  color: var(--pink);
+  color: var(--cyan);
   font-size: 1.5rem;
 }
 

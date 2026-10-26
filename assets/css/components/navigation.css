@@ -53,7 +53,7 @@
 .topbar__lang-link:hover,
 .topbar__link.is-active,
 .topbar__lang-link.is-active {
-  color: var(--pink);
+  color: var(--cyan);
 }
 
 .topbar__link.is-active,
@@ -69,7 +69,7 @@
   bottom: -0.7rem;
   width: 100%;
   height: 2px;
-  background: var(--pink);
+  background: var(--cyan);
   border-radius: 999px;
   box-shadow: 0 0 10px rgba(255, 121, 198, 0.45);
 }

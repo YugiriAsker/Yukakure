@@ -24,8 +24,8 @@
   letter-spacing: -0.03em;
 }
 
-.section-title--pink {
-  color: var(--pink);
+.section-title--cyan {
+  color: var(--cyan);
 }
 
 .empty-state {
