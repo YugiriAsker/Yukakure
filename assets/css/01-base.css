@@ -12,13 +12,12 @@ body {
   background:
     radial-gradient(
       circle at top,
-      rgba(47, 61, 77, 0.35) 0%,
+      rgba(47, 61, 77, 0.08) 0%,
       transparent 38%
     ),
     linear-gradient(
       180deg,
-      #2F3D4D 0%,
-      var(--bg) 42%,
+      var(--bg) 0%,
       var(--bg-deep) 100%
     );
   color: var(--text);
