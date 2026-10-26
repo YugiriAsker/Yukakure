@@ -1,13 +1,12 @@
 ---
-title: 3dsLibris
+title: Holy
 date: 2026-07-03
 description: 二次元感想？！
-icon: fa-solid fa-book-open-reader
+icon: fa-solid fa-moon
 accent: cyan
 status: active
 tags:
-  - 毛象
+  - Misskey
 projectUrl: https://dvd.chat/@Holy
 draft: false
 ---
-这是一段测试……

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/3dslibris.md",
+                "file": "posts/是来哟.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3dslibris"
+              "title": "是来哟"
             }
           }
         ]
@@ -188,13 +188,15 @@
   "active": "e6946a804395fc68",
   "lastOpenFiles": [
     "posts/MUJI好歹物测评.md",
+    "projects/Asylum.md",
+    "projects/Holy.md",
+    "projects/ThinAir.md",
+    "projects/_index.md",
     "posts/是来哟.md",
     "2026-05-10.md",
     "posts/math-and-technical-notes.md",
     "posts/_index.md",
     "_index.md",
-    "projects/_index.md",
-    "projects/rewired.md",
     "projects/3dslibris.md",
     "projects",
     "posts",
