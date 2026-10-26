@@ -65,10 +65,10 @@ name = "关于"
 pageRef = "/about"
 weight = 40
 
-[[languages.zh-cn.menus.main]]
-name = "联系"
-pageRef = "/contact"
-weight = 50
+#[[languages.zh-cn.menus.main]]
+#name = "联系"
+#pageRef = "/contact"
+#weight = 50
 
 [[languages.zh-cn.params.social]]
 name = "GitHub"
