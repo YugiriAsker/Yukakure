@@ -101,9 +101,16 @@
                   {{ end }}
                 </span>
 
-                <span class="blog-card__reading">
-                  {{ .ReadingTime }} {{ i18n "minutes" }}
-                </span>
+{{ $plainText := .Plain | plainify | replaceRE "\\s+" "" }}
+{{ $charCount := strings.RuneCount $plainText }}
+{{ $readingMinutes := div (add $charCount 399) 400 }}
+{{ if lt $readingMinutes 1 }}
+    {{ $readingMinutes = 1 }}
+{{ end }}
+
+<span class="blog-card__reading">
+    {{ $readingMinutes }} {{ i18n "minutes" }}
+</span>
 
                 <span class="blog-card__arrow" aria-hidden="true">→</span>
               </a>
