@@ -29,7 +29,7 @@ html[data-theme="light"] {
   --bg: #E2E9F1;
   --bg-deep: #E0E7EF;
   --bg-soft: #EEF5FD;
-  --line: rgba(45, 55, 65, 0.25);
+--line: rgba(45, 55, 65, 0.12);
 
   --text: #263238;
   --muted: #64747A;

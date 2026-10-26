@@ -70,10 +70,10 @@ weight = 40
 #pageRef = "/contact"
 #weight = 50
 
-[[languages.zh-cn.params.social]]
-name = "GitHub"
-url = "https://github.com/YugiriAsker/Yukakure"
-icon = "fa-brands fa-github"
+#[[languages.zh-cn.params.social]]
+#name = "GitHub"
+#url = "https://github.com/YugiriAsker/Yukakure"
+#icon = "fa-brands fa-github"
 
 # 子站点：有自己的文档站、实验室或其他项目网站时再启用。
 [[languages.zh-cn.params.subnodes]]
