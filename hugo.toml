@@ -28,7 +28,7 @@ endLevel = 3
 label = "简体中文"
 locale = "zh-CN"
 weight = 1
-contentDir = "content"
+contentDir = "Yukakure"
 title = "Yukakure"
 
 [languages.zh-cn.params]
