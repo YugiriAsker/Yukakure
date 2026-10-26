@@ -1,24 +1,23 @@
-
 :root {
-  /* 页面背景 */
-  --bg: #F5F2ED;
-  --bg-deep: #EAE5DE;
-  --bg-soft: #FFFCF8;
-  --line: rgba(115, 105, 91, 0.20);
+  /* 页面背景：浅白、微暖 */
+  --bg: #FAFAF7;
+  --bg-deep: #F0F3F1;
+  --bg-soft: #FFFFFF;
+  --line: rgba(48, 72, 82, 0.14);
 
-  /* 文字 */
-  --text: #393832;
-  --muted: #817B72;
-  --muted-soft: #A69F95;
+  /* 文字：加深蓝灰色，提高可读性 */
+  --text: #263C49;
+  --muted: #536B78;
+  --muted-soft: #718591;
 
-  /* 强调色 */
-  --cyan: #72958A;
-  --green: #7D9875;
-  --orange: #C99566;
-  --pink: #C58FA0;
-  --purple: #9B8AB8;
-  --red: #C87570;
-  --yellow: #D2B66E;
+  /* 强调色：薄荷绿 */
+  --cyan: #268F7B;
+  --green: #65BFA8;
+  --orange: #B88958;
+  --pink: #BB8295;
+  --purple: #9285B5;
+  --red: #C56F70;
+  --yellow: #BCA45E;
 
   /* 页面布局 */
   --content-width: 980px;
