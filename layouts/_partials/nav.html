@@ -27,26 +27,20 @@
 			{{ end }}
 		</ul>
 
-		<ul class="topbar__lang" aria-label="Language selector">
-			{{ $currentLang := site.Language.Name }}
-			{{ $translations := .AllTranslations }}
 
-			{{ if lt (len $translations) 2 }}
-				{{ $translations = site.Home.AllTranslations }}
-			{{ end }}
+<ul class="topbar__lang" aria-label="Theme selector">
+  <li class="topbar__lang-item">
+    <button
+      class="topbar__lang-link theme-toggle"
+      type="button"
+      aria-label="切换日夜模式"
+      title="切换日夜模式"
+    >
+      <i class="fa-solid fa-sun theme-toggle__sun" aria-hidden="true"></i>
+      <i class="fa-solid fa-moon theme-toggle__moon" aria-hidden="true"></i>
+    </button>
+  </li>
+</ul>
 
-			{{ range $translations }}
-				<li class="topbar__lang-item">
-					<a class="topbar__lang-link {{ if eq .Language.Name $currentLang }}is-active{{ end }}"
-						href="{{ .RelPermalink }}" hreflang="{{ .Language.Locale }}" lang="{{ .Language.Locale }}" 
-						{{ if eq
-							.Language.Name $currentLang
-						}}aria-current="page" 
-						{{ end }}>
-						{{ upper .Language.Name }}
-					</a>
-				</li>
-			{{ end }}
-		</ul>
 	</div>
 </nav>

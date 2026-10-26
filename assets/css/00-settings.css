@@ -20,3 +20,78 @@
   --article-width: 820px;
   --topbar-gap: 2rem;
 }
+
+
+/* 浅色主题 */
+html[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #F4F1EA;
+  --bg-deep: #E7E2D8;
+  --bg-soft: #FFFFFF;
+  --line: rgba(45, 55, 65, 0.25);
+
+  --text: #263238;
+  --muted: #64747A;
+  --muted-soft: #50585B;
+
+  --cyan: #345B70;
+  --green: #54775B;
+  --orange: #9A6829;
+  --pink: #A45F78;
+  --purple: #786581;
+  --red: #B64F49;
+  --yellow: #927B32;
+}
+
+/* 浅色模式下，页面背景同步变亮 */
+html[data-theme="light"] body {
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255, 255, 255, 0.55) 0%,
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      var(--bg) 0%,
+      var(--bg-deep) 100%
+    );
+}
+
+/* 浅色模式下弱化终端扫描线 */
+html[data-theme="light"] body::before {
+  opacity: 0.04;
+}
+
+/* 主题按钮 */
+.theme-toggle {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  min-height: 2rem;
+}
+
+.theme-toggle:hover {
+  color: var(--pink);
+}
+
+/* 默认深色模式：显示太阳 */
+.theme-toggle__moon {
+  display: none;
+}
+
+/* 浅色模式：显示月亮 */
+html[data-theme="light"] .theme-toggle__sun {
+  display: none;
+}
+
+html[data-theme="light"] .theme-toggle__moon {
+  display: inline-block;
+}
