@@ -1,6 +1,6 @@
 ---
-title: "About"
-description: "Sample static page."
+title: About
+description: 静静地、静静的……
 ---
 
 ʢᴗ.ᴗʡ ᶻ 𝗓 𐰁...

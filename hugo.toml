@@ -49,12 +49,12 @@ pageRef = "/"
 weight = 10
 
 [[languages.zh-cn.menus.main]]
-name = "文章"
+name = "日常"
 pageRef = "/posts"
 weight = 20
 
 [[languages.zh-cn.menus.main]]
-name = "项目"
+name = "猫箱"
 pageRef = "/projects"
 weight = 30
 
