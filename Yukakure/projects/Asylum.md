@@ -3,7 +3,7 @@ title: Asylum
 date: 2026-07-03
 description: 吃吃喝喝存档中……
 icon: fa-solid fa-feather
-accent: "#A5F3FC"
+accent: green
 status: active
 tags:
   - Mastodon
