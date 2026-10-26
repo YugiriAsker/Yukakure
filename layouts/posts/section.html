@@ -46,7 +46,7 @@
           <button
             class="blog-filter"
             type="button"
-            data-blog-category-filter="{{ . | urlize }}"
+            data-blog-category-filter="{{ . }}"
             aria-pressed="false"
           >
             {{ . }}
@@ -56,13 +56,13 @@
 
       {{ if $posts }}
         <div class="blog-list" data-blog-list>
-          {{ range $posts }}
-            {{ $postCategories := .Params.categories | default slice }}
-            {{ $categoryKeys := slice }}
+{{ range $posts }}
+  {{ $postCategories := .Params.categories | default slice }}
+  {{ $categoryKeys := slice }}
 
-            {{ range $postCategories }}
-              {{ $categoryKeys = $categoryKeys | append (. | urlize) }}
-            {{ end }}
+  {{ range $postCategories }}
+    {{ $categoryKeys = $categoryKeys | append . }}
+  {{ end }}
 
             {{ $postYear := .Date.Format "2006" }}
             {{ $postTags := .Params.tags | default slice }}
@@ -168,12 +168,12 @@
 
           {{ range $categoryNames }}
             {{ $cat := . }}
-            {{ $catKey := . | urlize }}
+            {{ $catKey := . }}
             {{ $count := 0 }}
 
             {{ range $posts }}
               {{ range (.Params.categories | default slice) }}
-                {{ if eq (. | urlize) $catKey }}
+                {{ if eq . $catKey }}
                   {{ $count = add $count 1 }}
                 {{ end }}
               {{ end }}

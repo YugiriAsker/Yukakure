@@ -49,12 +49,16 @@
 
   function getMatches() {
     return cards.filter((card) => {
-      const categories = normalize(card.dataset.categories).split(/\s+/).filter(Boolean);
+      const categories = (card.dataset.categories || "")
+  .split("|")
+  .map((category) => normalize(category))
+  .filter(Boolean);
       const year = normalize(card.dataset.year);
       const searchable = normalize(card.dataset.search);
 
-      const matchesCategory =
-        currentCategory === "all" || categories.includes(currentCategory);
+const matchesCategory =
+  currentCategory === "all" ||
+  categories.includes(normalize(currentCategory));
 
       const matchesYear =
         currentYear === "all" || year === currentYear;
