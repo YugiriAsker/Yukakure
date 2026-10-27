@@ -1,4 +1,10 @@
+
 header {
   border-bottom: 1px solid #222;
   margin-bottom: 1rem;
+}
+
+/* 白天模式：淡化页头下面的分隔线 */
+html[data-theme="light"] header {
+  border-bottom-color: rgba(45, 55, 65, 0.08);
 }

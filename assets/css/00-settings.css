@@ -44,24 +44,14 @@ html[data-theme="light"] {
  --yellow: #b7ae8f;
 }
 
-/* 浅色模式下，页面背景同步变亮 */
+/* 浅色模式：使用纯色背景，取消渐变 */
 html[data-theme="light"] body {
-  background:
-    radial-gradient(
-      circle at top,
-      rgba(255, 255, 255, 0.55) 0%,
-      transparent 38%
-    ),
-    linear-gradient(
-      180deg,
-      var(--bg) 0%,
-      var(--bg-deep) 100%
-    );
+  background: var(--bg);
 }
 
 /* 浅色模式下弱化终端扫描线 */
 html[data-theme="light"] body::before {
-  opacity: 0.04;
+  opacity: 0;
 }
 
 /* 主题按钮 */
