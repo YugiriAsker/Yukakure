@@ -26,7 +26,7 @@
 html[data-theme="light"] {
   color-scheme: light;
 
- --bg: #F6F4EA;
+} --bg: #F6F4EA;
  --bg-deep: #F5F3E9;
  --bg-soft: #F7F5EB;
  --line: rgba(45, 55, 65, 0.12);
@@ -38,7 +38,7 @@ html[data-theme="light"] {
   --cyan: #8fb2c9;
  --green: #83a78d ;
  --orange: #b7ae8f;
- --pink: #769C6C;
+ --pink: #70887d;
  --purple: #869d9d;
  --red: #b7ae8f;
  --yellow: #b7ae8f;
