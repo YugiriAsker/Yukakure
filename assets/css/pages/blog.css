@@ -46,9 +46,9 @@
 
 .blog-filter,
 .blog-tax-button {
-  border: 1px solid rgba(189, 147, 249, 0.55);
-  background: rgba(189, 147, 249, 0.045);
-  color: var(--purple);
+  border: 1px solid rgba(112, 136, 125, 0.4);
+  background: rgba(112, 136, 125, 0.04);
+  color: #70887d;
   font: inherit;
   cursor: pointer;
 }
@@ -61,10 +61,10 @@
 .blog-filter.is-active,
 .blog-tax-button:hover,
 .blog-tax-button.is-active {
-  border-color: rgba(139, 233, 253, 0.85);
-  color: var(--cyan);
-  background: rgba(139, 233, 253, 0.08);
-  text-shadow: 0 0 12px rgba(139, 233, 253, 0.25);
+  border-color: rgba(112, 136, 125, 0.8);
+  color: #536f62;
+  background: rgba(112, 136, 125, 0.12);
+  text-shadow: none;
 }
 
 .blog-list {
@@ -323,9 +323,9 @@ background: rgba(255, 255, 255, 0.55);
 }
 
 .blog-filter.is-active {
-  border-color: rgba(139, 233, 253, 0.85);
-  color: var(--cyan);
-  background: rgba(139, 233, 253, 0.08);
+  border-color: rgba(112, 136, 125, 0.8);
+  color: #536f62;
+  background: rgba(112, 136, 125, 0.12);
 }
 
 .blog-card[hidden],
