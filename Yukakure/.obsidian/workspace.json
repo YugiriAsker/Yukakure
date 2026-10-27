@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/_index.md",
+                "file": "posts/_index.md",
                 "mode": "source",
                 "source": false
               },
@@ -187,10 +187,10 @@
   },
   "active": "e6946a804395fc68",
   "lastOpenFiles": [
+    "projects/_index.md",
     "posts/_index.md",
     "posts/是来哟.md",
     "posts/MUJI好歹物测评.md",
-    "projects/_index.md",
     "_index.md",
     "projects/Asylum.md",
     "projects/Holy.md",
