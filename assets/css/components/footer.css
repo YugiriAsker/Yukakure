@@ -20,7 +20,7 @@
 }
 
 .site-footer a {
-  color: var(--cyan);
+  color: var(--pink);
   font-weight: 600;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .site-footer__heart {
-  color: var(--cyan);
+  color: var(--pink);
 }
 
 .site-footer__prompt {

@@ -10,7 +10,7 @@
 
 .blog-title {
   margin: 0;
-  color: var(--cyan);
+  color: var(--pink);
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: 1;
   letter-spacing: -0.06em;
@@ -113,7 +113,7 @@
 }
 
 .blog-card__title {
-  color: var(--cyan);
+  color: var(--pink);
   font-weight: 700;
 }
 
@@ -146,7 +146,7 @@
 }
 
 .blog-card__arrow {
-  color: var(--cyan);
+  color: var(--pink);
   font-size: 1.5rem;
 }
 
@@ -179,7 +179,7 @@
 
 .blog-widget__title {
   margin: 0 0 0.8rem;
-  color: var(--cyan);
+  color: var(--pink);
   font-size: 1.1rem;
   line-height: 1.2;
   letter-spacing: -0.035em;
@@ -247,7 +247,7 @@
 }
 
 .blog-tax-link:hover {
-  color: var(--cyan);
+  color: var(--pink);
 }
 
 .blog-tag-cloud {
@@ -265,7 +265,7 @@
 }
 
 .blog-tag-cloud__tag:hover {
-  color: var(--cyan);
+  color: var(--pink);
   border-color: rgba(255, 121, 198, 0.58);
   background: rgba(255, 121, 198, 0.05);
 }
@@ -293,13 +293,13 @@
 
 .blog-pagination__button:hover {
   border-color: rgba(255, 121, 198, 0.65);
-  color: var(--cyan);
+  color: var(--pink);
   background: rgba(255, 121, 198, 0.06);
 }
 
 .blog-pagination__button.is-active {
   border-color: rgba(255, 121, 198, 0.75);
-  color: var(--cyan);
+  color: var(--pink);
   background: rgba(255, 121, 198, 0.08);
   font-weight: 700;
 }
@@ -315,11 +315,11 @@
 }
 
 .blog-tax-button.is-active {
-  color: var(--cyan);
+  color: var(--pink);
 }
 
 .blog-tax-button.is-active span:first-child {
-  color: var(--cyan);
+  color: var(--pink);
 }
 
 .blog-filter.is-active {

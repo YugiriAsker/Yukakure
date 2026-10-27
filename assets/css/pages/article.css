@@ -13,7 +13,7 @@
 }
 
 .page__back:hover {
-  color: var(--cyan);
+  color: var(--pink);
 }
 
 .page__header {
@@ -22,7 +22,7 @@
 
 .page__title {
   margin: 0;
-  color: var(--cyan);
+  color: var(--pink);
   font-size: clamp(2.1rem, 5vw, 3.35rem);
   line-height: 1.1;
   letter-spacing: -0.06em;
@@ -56,7 +56,7 @@
 
 .page-toc__title {
   margin: 0 0 0.4rem;
-  color: var(--cyan);
+  color: var(--pink);
   font-size: 0.9rem;
 }
 
@@ -107,7 +107,7 @@
 }
 
 .page__content h3 {
-  color: var(--cyan);
+  color: var(--pink);
   font-size: 1rem;
 }
 
@@ -122,7 +122,7 @@
 }
 
 .page__content a:hover {
-  color: var(--cyan);
+  color: var(--pink);
 }
 
 .page__content ul,
@@ -177,7 +177,7 @@
 }
 
 .page__content th {
-  color: var(--cyan);
+  color: var(--pink);
   background: rgba(40, 42, 54, 0.35);
 }
 
@@ -235,7 +235,7 @@
 
 .next-post__left,
 .next-post__right {
-  color: var(--cyan);
+  color: var(--pink);
   font-size: 1.35rem;
 }
 
@@ -245,7 +245,7 @@
 }
 
 .next-post__label {
-  color: var(--cyan);
+  color: var(--pink);
   font-size: 0.82rem;
   font-weight: 700;
 }

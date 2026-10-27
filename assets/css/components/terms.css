@@ -46,7 +46,7 @@
 }
 
 .terms__link:hover {
-  color: var(--cyan);
+  color: var(--pink);
   border-color: rgba(255, 121, 198, 0.65);
   background: rgba(255, 121, 198, 0.06);
 }
