@@ -47,9 +47,9 @@
 .blog-filter.is-active,
 .blog-tax-button:hover,
 .blog-tax-button.is-active {
-  border-color: var(--cyan);
-  color: var(--cyan);
-  background: color-mix(in srgb, var(--cyan), transparent 88%);
+  border-color: #6A9B9B;
+  color: #527F80;
+  background: rgba(106, 155, 155, 0.12);
   text-shadow: none;
 }
 
