@@ -30,6 +30,7 @@
   align-items: start;
 }
 
+
 .blog-filter,
 .blog-tax-button {
   border: 1px solid color-mix(in srgb, var(--purple), transparent 45%);
@@ -47,11 +48,12 @@
 .blog-filter.is-active,
 .blog-tax-button:hover,
 .blog-tax-button.is-active {
-  border-color: #6A9B9B;
-  color: #527F80;
-  background: rgba(106, 155, 155, 0.12);
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: color-mix(in srgb, var(--cyan), transparent 88%);
   text-shadow: none;
 }
+
 
 .blog-list {
   display: grid;
