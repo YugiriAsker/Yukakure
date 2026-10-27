@@ -73,13 +73,13 @@
   background: rgba(40, 42, 54, 0.24);
 }
 
-/* 白天模式：文章卡片与背景柔和融合 */
+/* 白天模式：文章卡片改为白色 */
 html[data-theme="light"] .blog-card {
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.85);
 }
 
 html[data-theme="light"] .blog-card:hover {
-  background: rgba(255, 255, 255, 0.38);
+  background: #ffffff;
 }
 
 
@@ -196,9 +196,9 @@ html[data-theme="light"] .blog-card:hover {
   padding: 0.55rem 2.2rem 0.55rem 0.65rem;
 }
 
-/* 白天模式：搜索框采用半透明白色 */
+/* 白天模式：搜索框改为白色 */
 html[data-theme="light"] .blog-search__input {
-  background: rgba(255, 255, 255, 0.30);
+  background: #ffffff;
   color: var(--text);
 }
 
