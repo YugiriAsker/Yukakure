@@ -39,9 +39,10 @@
   margin-right: 0.35rem;
 }
 
+
 .projects-filter {
-  border: 1px solid rgba(189, 147, 249, 0.55);
-  background: rgba(189, 147, 249, 0.045);
+  border: 1px solid color-mix(in srgb, var(--purple), transparent 45%);
+  background: color-mix(in srgb, var(--purple), transparent 94%);
   color: var(--purple);
   font: inherit;
   padding: 0.25rem 0.7rem;
@@ -50,11 +51,12 @@
 
 .projects-filter:hover,
 .projects-filter.is-active {
-  border-color: rgba(139, 233, 253, 0.85);
+  border-color: var(--cyan);
   color: var(--cyan);
-  background: rgba(139, 233, 253, 0.08);
-  text-shadow: 0 0 12px rgba(139, 233, 253, 0.25);
+  background: color-mix(in srgb, var(--cyan), transparent 88%);
+  text-shadow: none;
 }
+
 
 .projects-list {
   display: grid;
@@ -205,20 +207,4 @@ html[data-theme="light"] .projects-card__icon {
 /* 技术标签 */
 html[data-theme="light"] .projects-card__tag {
   background: rgba(255, 255, 255, 0.22);
-}
-
-/* 分类筛选按钮：取消明显的蓝紫底色 */
-html[data-theme="light"] .projects-filter {
-  border-color: rgba(112, 136, 125, 0.35);
-  background: rgba(255, 255, 255, 0.18);
-  color: #70887d;
-}
-
-/* 筛选按钮悬停或选中 */
-html[data-theme="light"] .projects-filter:hover,
-html[data-theme="light"] .projects-filter.is-active {
-  border-color: rgba(112, 136, 125, 0.7);
-  background: rgba(112, 136, 125, 0.10);
-  color: #536f62;
-  text-shadow: none;
 }
