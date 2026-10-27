@@ -34,7 +34,7 @@ contentDir = "Yukakure"
 title = "Yukakure"
 
 [languages.zh-cn.params]
-author = "Yukakure"
+#author = "Yukakure"
 descriptionLines = [
   "撕裂有时，缝补有时；静默有时，言语有时；",
   "喜爱有时，恨恶有时；争战有时，和好有时。",
@@ -42,7 +42,7 @@ descriptionLines = [
 tagline = "你好，我是来，这是我的[日常](/posts/)与[猫箱](/projects/)♪︎"
 
 [languages.zh-cn.params.footer]
-text = 'Yukakure // 由 [Hugo](https://gohugo.io/) 驱动 // 使用 [Rewired](https://github.com/RigleGit/rewired) 主题'
+text = '// 由 [Hugo](https://gohugo.io/) 驱动 // 使用 [Rewired](https://github.com/RigleGit/rewired) 主题'
 prompt = "yukakure:~$"
 
 [[languages.zh-cn.menus.main]]
