@@ -4,9 +4,13 @@
   max-width: var(--content-width);
 }
 
+
 .blog-header {
   margin-bottom: 1.6rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--line);
 }
+
 
 .blog-title {
   margin: 0;
