@@ -1,8 +1,6 @@
 ---
-title: "Home"
-description: "Rewired theme demo."
+title: Home
+description: ʢᴗ.ᴗʡ ᶻ 𝗓 𐰁
 ---
 
-# Yukakure
-
- ʢᴗ.ᴗʡ ᶻ 𝗓 𐰁
+ʢᴗ.ᴗʡ ᶻ 𝗓 𐰁

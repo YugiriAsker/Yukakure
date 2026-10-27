@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/ThinAir.md",
+                "file": "_index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ThinAir"
+              "title": "_index"
             }
           }
         ]
@@ -187,16 +187,16 @@
   },
   "active": "e6946a804395fc68",
   "lastOpenFiles": [
-    "projects/Holy.md",
-    "projects/Asylum.md",
-    "posts/MUJI好歹物测评.md",
-    "posts/是来哟.md",
     "projects/_index.md",
-    "2026-10-26.md",
-    "about.md",
-    "_index.md",
+    "projects/Asylum.md",
+    "projects/Holy.md",
     "projects/ThinAir.md",
     "posts/_index.md",
+    "posts/是来哟.md",
+    "_index.md",
+    "posts/MUJI好歹物测评.md",
+    "2026-10-26.md",
+    "about.md",
     "2026-05-10.md",
     "posts/math-and-technical-notes.md",
     "projects/3dslibris.md",

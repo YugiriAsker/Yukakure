@@ -1,6 +1,6 @@
 ---
 title: ThinAir
-date: 2026-05-11
+date: 2026-03-10
 description: 更零碎的碎碎念……
 icon: fa-solid fa-wand-magic-sparkles
 accent: purple

@@ -1,4 +1,4 @@
 ---
-title: Blog
-description: 日常碎碎念中……
+title: 江海寸心
+description: 每向梦中还说梦...
 ---
