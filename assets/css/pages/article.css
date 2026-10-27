@@ -254,3 +254,45 @@
   color: var(--text);
   font-size: 0.9rem;
 }
+
+
+
+/* =========================
+   文章页面：白天模式
+   ========================= */
+
+/* 文章目录：浅色半透明 */
+html[data-theme="light"] .page-toc {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* 文章代码块：浅色半透明 */
+html[data-theme="light"] .page__content pre {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* 行内代码 */
+html[data-theme="light"] .page__content code {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* 正文表格标题行 */
+html[data-theme="light"] .page__content th {
+  background: rgba(255, 255, 255, 0.38);
+}
+
+/* 文章图片：浅色半透明底色 */
+html[data-theme="light"] .page__content img,
+html[data-theme="light"] .content-figure img {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* 上一篇 / 下一篇文章卡片 */
+html[data-theme="light"] .next-post {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* 鼠标悬停：稍微提亮 */
+html[data-theme="light"] .next-post:hover {
+  background: rgba(255, 255, 255, 0.38);
+}
