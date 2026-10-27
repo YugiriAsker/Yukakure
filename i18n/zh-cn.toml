@@ -1,17 +1,17 @@
 [subnodes]
-other = "子站点"
+other = "同人站"
 
 [latest_posts]
 other = "最新文章"
 
 [projects]
-other = "项目"
+other = "猫箱们"
 
 [no_posts]
-other = "暂时还没有发布文章。"
+other = "什么都没有喵？"
 
 [no_projects]
-other = "暂时还没有发布项目。"
+other = "什么都没有喵？"
 
 [tags]
 other = "标签"
@@ -20,7 +20,7 @@ other = "标签"
 other = "分类"
 
 [back_to_blog]
-other = "返回博客"
+other = "返回"
 
 [words]
 other = "字"
@@ -74,7 +74,7 @@ other = "搜索文章..."
 other = "归档"
 
 [no_matching_posts]
-other = "没有符合当前筛选条件的文章。"
+other = "筛不出来喵！"
 
 [pagination]
 other = "分页"
@@ -86,4 +86,4 @@ other = "所有年份"
 other = "跳转到正文"
 
 [no_terms]
-other = "暂时还没有内容。"
+other = "暂时还没有喵！"
