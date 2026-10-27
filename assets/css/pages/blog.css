@@ -83,8 +83,8 @@
 }
 
 .blog-card:hover {
-  border-color: rgba(255, 121, 198, 0.48);
-  background: rgba(40, 42, 54, 0.24);
+  border-color: #BCE5D6;
+  background: rgba(40, 42, 54, 0.15);
 }
 
 /* 白天模式：文章卡片与背景柔和融合 */
@@ -93,7 +93,7 @@ html[data-theme="light"] .blog-card {
 }
 
 html[data-theme="light"] .blog-card:hover {
-  background: rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 
