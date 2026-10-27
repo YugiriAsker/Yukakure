@@ -14,7 +14,6 @@
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: 1;
   letter-spacing: -0.06em;
-  text-shadow: 0 0 24px rgba(255, 121, 198, 0.2);
 }
 
 .blog-description {
@@ -165,7 +164,6 @@ html[data-theme="light"] .blog-card:hover {
 .blog-card:hover .blog-card__title,
 .blog-card:hover .blog-card__arrow {
   color: var(--cyan);
-  text-shadow: 0 0 12px rgba(139, 233, 253, 0.28);
 }
 
 .blog-empty {

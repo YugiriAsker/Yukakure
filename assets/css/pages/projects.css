@@ -16,7 +16,6 @@
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: 1;
   letter-spacing: -0.06em;
-  text-shadow: 0 0 24px rgba(255, 121, 198, 0.2);
 }
 
 .projects-description {
@@ -180,7 +179,6 @@
 .projects-card:hover .projects-card__title,
 .projects-card:hover .projects-card__arrow {
   color: var(--project-accent);
-  text-shadow: 0 0 12px color-mix(in srgb, var(--project-accent), transparent 55%);
 }
 
 

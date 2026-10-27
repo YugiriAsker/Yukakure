@@ -48,7 +48,6 @@
 
 .home-hero__tagline-text a:hover {
   color: var(--cyan);
-  text-shadow: 0 0 12px rgba(139, 233, 253, 0.35);
 }
 
 .home-social {
@@ -206,5 +205,4 @@
 .project-row:hover .project-row__name,
 .project-row:hover .project-row__arrow {
   color: var(--pink);
-  text-shadow: 0 0 12px rgba(255, 121, 198, 0.32);
 }

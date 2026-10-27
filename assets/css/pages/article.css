@@ -26,7 +26,6 @@
   font-size: clamp(2.1rem, 5vw, 3.35rem);
   line-height: 1.1;
   letter-spacing: -0.06em;
-  text-shadow: 0 0 24px rgba(255, 121, 198, 0.2);
 }
 
 .page__meta {

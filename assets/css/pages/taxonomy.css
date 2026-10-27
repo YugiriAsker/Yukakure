@@ -19,7 +19,6 @@
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: 1;
   letter-spacing: -0.06em;
-  text-shadow: 0 0 24px rgba(255, 121, 198, 0.2);
 }
 
 .taxonomy-description,
@@ -141,5 +140,4 @@
 .term-card:hover .term-card__title,
 .term-card:hover .term-card__arrow {
   color: var(--cyan);
-  text-shadow: 0 0 12px rgba(139, 233, 253, 0.28);
 }
