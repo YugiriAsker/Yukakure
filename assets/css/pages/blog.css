@@ -30,25 +30,11 @@
   align-items: start;
 }
 
-.blog-filters {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  margin-bottom: 1rem;
-  color: var(--muted-soft);
-  font-size: 0.92rem;
-}
-
-.blog-filters__label {
-  margin-right: 0.35rem;
-}
-
 .blog-filter,
 .blog-tax-button {
-  border: 1px solid rgba(112, 136, 125, 0.4);
-  background: rgba(112, 136, 125, 0.04);
-  color: #70887d;
+  border: 1px solid color-mix(in srgb, var(--purple), transparent 45%);
+  background: color-mix(in srgb, var(--purple), transparent 94%);
+  color: var(--purple);
   font: inherit;
   cursor: pointer;
 }
@@ -61,9 +47,9 @@
 .blog-filter.is-active,
 .blog-tax-button:hover,
 .blog-tax-button.is-active {
-  border-color: rgba(112, 136, 125, 0.8);
-  color: #536f62;
-  background: rgba(112, 136, 125, 0.12);
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: color-mix(in srgb, var(--cyan), transparent 88%);
   text-shadow: none;
 }
 
