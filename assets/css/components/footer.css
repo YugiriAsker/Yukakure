@@ -36,3 +36,31 @@
   flex-shrink: 0;
   color: var(--text);
 }
+
+.site-footer__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+}
+
+.site-footer__toggle:hover {
+  color: var(--cyan);
+}
+
+.site-footer__toggle-icon {
+  color: var(--cyan);
+}
+
+.site-footer__meta[hidden] {
+  display: none;
+}
+
+.site-footer__meta:not([hidden]) {
+  margin-top: 0.6rem;
+}
