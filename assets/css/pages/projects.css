@@ -180,3 +180,45 @@
   color: var(--project-accent);
   text-shadow: 0 0 12px color-mix(in srgb, var(--project-accent), transparent 55%);
 }
+
+
+/* =========================
+   Projects 页面：白天模式
+   ========================= */
+
+/* 项目卡片：浅白半透明 */
+html[data-theme="light"] .projects-card {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(45, 55, 65, 0.08);
+}
+
+/* 鼠标悬停：稍微提亮 */
+html[data-theme="light"] .projects-card:hover {
+  background: rgba(255, 255, 255, 0.38);
+}
+
+/* 左侧图标框 */
+html[data-theme="light"] .projects-card__icon {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* 技术标签 */
+html[data-theme="light"] .projects-card__tag {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* 分类筛选按钮：取消明显的蓝紫底色 */
+html[data-theme="light"] .projects-filter {
+  border-color: rgba(112, 136, 125, 0.35);
+  background: rgba(255, 255, 255, 0.18);
+  color: #70887d;
+}
+
+/* 筛选按钮悬停或选中 */
+html[data-theme="light"] .projects-filter:hover,
+html[data-theme="light"] .projects-filter.is-active {
+  border-color: rgba(112, 136, 125, 0.7);
+  background: rgba(112, 136, 125, 0.10);
+  color: #536f62;
+  text-shadow: none;
+}
