@@ -3,9 +3,6 @@
   box-sizing: border-box;
 }
 
-@import url("https://fontsapi.zeoseven.com/811/main/result.css");
-
-
 
 html {
   color-scheme: dark;
@@ -61,19 +58,3 @@ img {
   padding: 1.5rem 0 4rem;
 }
 
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.home-hero__title,
-.home-hero__name,
-.page__title,
-.post-title,
-.article-title {
-  font-family: "ChangBanDianSong 16", "Noto Sans SC", sans-serif;
-  font-weight: normal;
-}
