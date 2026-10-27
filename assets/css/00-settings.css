@@ -35,11 +35,11 @@ html[data-theme="light"] {
  --muted: #6A8D8C;
  --muted-soft: #8A9A9C;
 
---cyan: #894e54;
+  --cyan: #63bbd0;
  --green: #B6D7A8;
  --orange: #b7ae8f;
  --pink: #428675;
- --purple: #63bbd0;
+ --purple: #894e54;
  --red: #b7ae8f;
  --yellow: #b7ae8f;
 }
