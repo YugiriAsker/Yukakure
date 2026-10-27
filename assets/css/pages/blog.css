@@ -338,12 +338,6 @@ html[data-theme="light"] .blog-search__input {
   color: var(--pink);
 }
 
-.blog-filter.is-active {
-  border-color: rgba(112, 136, 125, 0.8);
-  color: #536f62;
-  background: rgba(112, 136, 125, 0.12);
-}
-
 .blog-card[hidden],
 .blog-pagination[hidden],
 .blog-empty[hidden] {
