@@ -3,10 +3,9 @@
   box-sizing: border-box;
 }
 
-/* ===== 本地长坂点宋字体 ===== */
 @font-face {
   font-family: "ChangBanDianSong";
-  src: url("/fonts/ChangBanDianSong-SP-12.ttf") format("truetype");
+  src: url("../fonts/ChangBanDianSong-SP-12.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
