@@ -26,22 +26,22 @@
 html[data-theme="light"] {
   color-scheme: light;
 
-  --bg: #E2E9F1;
-  --bg-deep: #E0E7EF;
-  --bg-soft: #EEF5FD;
---line: rgba(45, 55, 65, 0.12);
+ --bg: #F6F4EA;
+ --bg-deep: #F5F3E9;
+ --bg-soft: #F7F5EB;
+ --line: rgba(45, 55, 65, 0.12);
 
-  --text: #263238;
-  --muted: #64747A;
-  --muted-soft: #50585B;
+  --text: #1D3F5A;
+ --muted: #6A8D8C;
+ --muted-soft: #8A9A9C;
 
-  --cyan: #1D3F5A;
-  --green: #759F9A;
-  --orange: #986524;
-  --pink: #A45F78;
-  --purple: #74759b;
-  --red: #9a8878;
-  --yellow: #b7ae8f;
+  --cyan: #894e54;
+ --green: #B2F0D9;
+ --orange: #b7ae8f;
+ --pink: #A4C2A8;
+ --purple: #63bbd0;
+ --red: #b7ae8f;
+ --yellow: #b7ae8f;
 }
 
 /* 浅色模式下，页面背景同步变亮 */
