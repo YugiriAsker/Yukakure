@@ -30,6 +30,19 @@
   align-items: start;
 }
 
+.blog-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+  color: var(--muted-soft);
+  font-size: 0.92rem;
+}
+
+.blog-filters__label {
+  margin-right: 0.35rem;
+}
 
 .blog-filter,
 .blog-tax-button {
