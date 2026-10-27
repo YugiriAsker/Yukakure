@@ -61,6 +61,13 @@
   display: none;
 }
 
+.site-footer {
+  position: relative;
+}
+
 .site-footer__meta:not([hidden]) {
-  margin-top: 0.6rem;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  margin-bottom: 0.6rem;
 }
