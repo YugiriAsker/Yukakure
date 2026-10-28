@@ -61,7 +61,6 @@
 
 <section class="home-section home-posts" aria-labelledby="latest-posts-title">
 <h2 id="latest-posts-title" class="section-title section-title--pink">
-    <i class="fa-solid fa-pen section-title__icon" aria-hidden="true"></i>
     {{ i18n "latest_posts" }}
 </h2>
 
@@ -75,7 +74,10 @@
 						{{ .Date.Format "2006-01-02" }}
 					</time>
 					<span class="post-row__separator" aria-hidden="true">|</span>
-					<span class="post-row__title">{{ .Title }}</span>
+					<span class="post-row__title">
+    <i class="fa-solid fa-pen post-row__icon" aria-hidden="true"></i>
+    {{ .Title }}
+</span>
 					<span class="post-row__arrow" aria-hidden="true">→</span>
 				</a>
 			{{ end }}

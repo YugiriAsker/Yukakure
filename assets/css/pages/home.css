@@ -344,10 +344,10 @@
   }
 }
 
-/* 最近在：书写笔图标 */
-.home-posts .section-title__icon {
-  margin-right: 0.4em;
+/* 最近在：每篇文章标题前的书写笔 */
+.post-row__icon {
+  display: inline-block;
+  margin-right: 0.45em;
+  color: var(--green);
   font-size: 0.9em;
-  vertical-align: 0.02em;
-  color: inherit;
 }
