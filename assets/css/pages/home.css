@@ -207,3 +207,120 @@
 .project-row:hover .project-row__arrow {
   color: var(--pink);
 }
+
+
+/* 首页：手机端布局优化 */
+@media (max-width: 640px) {
+  /* 猫箱们：名称在上，简介紧跟其下 */
+  .node-list {
+    gap: 0.25rem;
+  }
+
+  .node-row {
+    grid-template-columns: 1.5rem minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    column-gap: 0.65rem;
+    row-gap: 0.15rem;
+    align-items: center;
+    padding: 0.45rem 0;
+  }
+
+  .node-row__prompt {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .node-row__name {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .node-row__description {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    line-height: 1.45;
+  }
+
+  .node-row__arrow {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    font-size: 0.8rem;
+    opacity: 0.4;
+  }
+
+  /* 最近在：压缩日期和标题之间的距离 */
+  .post-list {
+    gap: 0.2rem;
+  }
+
+  .post-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 0.25rem;
+    padding: 0.35rem 0;
+  }
+
+  .post-row__date {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .post-row__separator {
+    display: none;
+  }
+
+  .post-row__title {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .post-row__arrow {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    font-size: 0.8rem;
+    opacity: 0.4;
+  }
+
+  /* 项目列表：名称和简介靠近 */
+  .project-list {
+    gap: 0.25rem;
+  }
+
+  .project-row {
+    grid-template-columns: 1.7rem minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    column-gap: 0.65rem;
+    row-gap: 0.15rem;
+    align-items: center;
+    padding: 0.45rem 0;
+  }
+
+  .project-row__icon {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .project-row__name {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .project-row__separator {
+    display: none;
+  }
+
+  .project-row__description {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    line-height: 1.45;
+  }
+
+  .project-row__arrow {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    font-size: 0.8rem;
+    opacity: 0.4;
+  }
+}
