@@ -344,10 +344,20 @@
   }
 }
 
-/* 最近在：每篇文章标题前的书写笔 */
+/* 最近在：每篇文章左侧的笔图标 */
+.post-row {
+  position: relative;
+  padding-left: 1.7rem;
+}
+
 .post-row__icon {
-  display: inline-block;
-  margin-right: 0.45em;
+  position: absolute;
+  left: 0;
+  top: 0.18rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
   color: var(--green);
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
