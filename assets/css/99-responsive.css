@@ -249,13 +249,13 @@
 }
 
 
-/* 手机端：收窄页面左右留白 */
+/* 手机端：轻微收窄页面左右留白 */
 @media (max-width: 640px) {
   main,
   .main,
   .container,
   .site-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
