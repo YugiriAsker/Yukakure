@@ -324,3 +324,11 @@
     opacity: 0.4;
   }
 }
+
+
+/* 手机端：首页主标题字体 */
+@media (max-width: 640px) {
+  .home-hero__title {
+    font-family: "BaDingShiWeiTi 16", sans-serif;
+  }
+}
