@@ -309,7 +309,7 @@ html[data-theme="light"] .next-post:hover {
 /* Page 正文排版 */
 .page__content p {
   line-height: 1.7 !important;
-  margin-bottom: 24px !important;
+  margin-bottom: 48px !important;
   letter-spacing: 0.02em;
 }
 
