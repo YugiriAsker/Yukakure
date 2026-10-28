@@ -1,25 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
+
+/* 在 DOM 就绪后初始化；如果 DOM 已经就绪，则立即执行 */
+function initializeFooterDisclosure() {
   const button = document.querySelector(".site-footer__toggle");
   const content = document.querySelector("#site-footer-content");
   const icon = document.querySelector(".site-footer__toggle-icon");
 
-  if (!button || !content) return;
+  if (button && content && !button.dataset.disclosureInitialized) {
+    button.dataset.disclosureInitialized = "true";
 
-  button.addEventListener("click", () => {
-    const expanded = button.getAttribute("aria-expanded") === "true";
+    button.addEventListener("click", () => {
+      const expanded = button.getAttribute("aria-expanded") === "true";
 
-    button.setAttribute("aria-expanded", String(!expanded));
-    content.hidden = expanded;
+      button.setAttribute("aria-expanded", String(!expanded));
+      content.hidden = expanded;
 
-    if (icon) {
-      icon.textContent = expanded ? "+" : "−";
-    }
-  });
-});
+      if (icon) {
+        icon.textContent = expanded ? "+" : "−";
+      }
+    });
+  }
 
-
-/* 正文注释：电脑悬停展开，手机点击展开 */
-document.addEventListener("DOMContentLoaded", () => {
+  /* 正文注释：电脑悬停展开，触屏设备点击展开 */
   const notes = document.querySelectorAll("[data-inline-note]");
   const canHover = window.matchMedia(
     "(hover: hover) and (pointer: fine)"
@@ -27,37 +28,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   notes.forEach((note) => {
     const trigger = note.querySelector(".inline-note__trigger");
-    const content = note.querySelector(".inline-note__content");
+    const noteContent = note.querySelector(".inline-note__content");
 
-    if (!trigger || !content) return;
+    if (!trigger || !noteContent || trigger.dataset.noteInitialized) return;
+
+    trigger.dataset.noteInitialized = "true";
 
     const open = () => {
-      content.hidden = false;
+      noteContent.hidden = false;
       trigger.setAttribute("aria-expanded", "true");
     };
 
     const close = () => {
-      content.hidden = true;
+      noteContent.hidden = true;
       trigger.setAttribute("aria-expanded", "false");
     };
 
     const toggle = () => {
-      if (content.hidden) {
+      if (noteContent.hidden) {
         open();
       } else {
         close();
       }
     };
 
-    // 手机和平板等触屏设备：点击展开或收起
     trigger.addEventListener("click", (event) => {
+      // 电脑端使用悬停交互，不再额外切换
       if (canHover.matches) return;
 
       event.preventDefault();
       toggle();
     });
 
-    // 电脑：鼠标悬停展开，移开收起
     note.addEventListener("mouseenter", () => {
       if (canHover.matches) open();
     });
@@ -66,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (canHover.matches) close();
     });
 
-    // 按 Escape 收起注释
     note.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         close();
@@ -74,4 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeFooterDisclosure);
+} else {
+  initializeFooterDisclosure();
+}
