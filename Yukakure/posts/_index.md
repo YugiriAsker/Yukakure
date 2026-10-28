@@ -1,4 +1,4 @@
 ---
 title: 江海寸心
-description: ": D"
+description: ʢᴗ.ᴗʡ ᶻ 𝗓 𐰁
 ---
