@@ -1,0 +1,15 @@
+
+{{- $id := printf "note-%d" .Ordinal -}}
+<span class="inline-note" data-inline-note>
+  <button
+    class="inline-note__trigger"
+    type="button"
+    aria-expanded="false"
+    aria-controls="{{ $id }}"
+  >{{ with .Get "label" }}{{ . }}{{ else }}注{{ end }}</button>
+  <span
+    class="inline-note__content"
+    id="{{ $id }}"
+    hidden
+  >{{ .Inner | markdownify }}</span>
+</span>
