@@ -70,9 +70,14 @@
 		<div class="post-list">
 			{{ range $posts }}
 <a class="post-row" href="{{ .RelPermalink }}">
-    <span class="post-row__icon" aria-hidden="true">
-        <i class="fa-solid fa-pen"></i>
-    </span>
+<a class="post-row" href="{{ .RelPermalink }}">
+    <time class="post-row__date" datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "2006-01-02" }}
+    </time>
+    <span class="post-row__separator" aria-hidden="true">|</span>
+    <span class="post-row__title">{{ .Title }}</span>
+    <span class="post-row__arrow" aria-hidden="true">🐾</span>
+</a>
 
     <time class="post-row__date" datetime="{{ .Date.Format "2006-01-02" }}">
         {{ .Date.Format "2006-01-02" }}
