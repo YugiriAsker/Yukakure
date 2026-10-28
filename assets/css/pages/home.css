@@ -286,6 +286,7 @@
 .post-row__date {
   grid-column: 2;
   grid-row: 1;
+  padding-left: 0.3rem;
 }
 
 .post-row__separator {
@@ -296,6 +297,7 @@
   grid-column: 2;
   grid-row: 2;
   min-width: 0;
+  padding-left: 0.3rem;
 }
 
 .post-row__arrow {
