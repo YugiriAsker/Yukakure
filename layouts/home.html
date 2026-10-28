@@ -1,6 +1,29 @@
 {{ define "main" }}
 
+<section class="home-hero" aria-labelledby="home-title">
+	<h1 id="home-title" class="home-hero__title">
+		{{ site.Title }}<span class="cursor" aria-hidden="true">_</span>
+	</h1>
 
+	<h2 class="home-hero__name">{{ site.Params.author }}</h2>
+
+	<p class="home-hero__description">
+		{{ with site.Params.descriptionLines }}
+			{{ range . }}
+				<span>{{ . }}</span>
+			{{ end }}
+		{{ else }} 
+			{{ site.Params.description }}
+		{{ end }}
+	</p>
+
+	<p class="home-hero__tagline">
+		<span class="home-hero__pipe" aria-hidden="true">|</span>
+		<span class="home-hero__tagline-text">
+			{{ site.Params.tagline | markdownify }}
+		</span>
+	</p>
+</section>
 
 {{ with site.Params.social }}
 	<section class="home-social" aria-label="Social links">
@@ -35,31 +58,6 @@
 		</div>
 	</section>
 {{ end }}
-
-<section class="home-hero" aria-labelledby="home-title">
-    <h1 id="home-title" class="home-hero__title">
-        {{ site.Title }}<span class="cursor" aria-hidden="true">_</span>
-    </h1>
-
-    <h2 class="home-hero__name">{{ site.Params.author }}</h2>
-
-    <p class="home-hero__description">
-        {{ with site.Params.descriptionLines }}
-            {{ range . }}
-                <span>{{ . }}</span>
-            {{ end }}
-        {{ else }} 
-            {{ site.Params.description }}
-        {{ end }}
-    </p>
-
-    <p class="home-hero__tagline">
-        <span class="home-hero__pipe" aria-hidden="true">|</span>
-        <span class="home-hero__tagline-text">
-            {{ site.Params.tagline | markdownify }}
-        </span>
-    </p>
-</section>
 
 <section class="home-section home-posts" aria-labelledby="latest-posts-title">
 <h2 id="latest-posts-title" class="section-title section-title--pink">
