@@ -344,3 +344,24 @@
   }
 }
 
+
+/* 最近在：笔图标与日期对齐 */
+.post-row {
+  padding-left: 0;
+  grid-template-columns: 1.25rem 8rem 1rem minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.post-row__icon {
+  position: static;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  color: var(--green);
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+
+
