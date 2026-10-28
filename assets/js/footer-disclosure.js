@@ -1,35 +1,30 @@
 
-/* 页脚展开与收起 */
-function initFooterDisclosure() {
+/* 初始化页脚展开与正文注释 */
+function initializeFooterDisclosure() {
+  /* 页脚展开与收起 */
   const button = document.querySelector(".site-footer__toggle");
   const content = document.querySelector("#site-footer-content");
   const icon = document.querySelector(".site-footer__toggle-icon");
 
-  if (!button || !content) return;
+  if (
+    button &&
+    content &&
+    button.dataset.footerBound !== "true"
+  ) {
+    button.dataset.footerBound = "true";
 
-  // 避免重复绑定事件
-  if (button.dataset.footerBound === "true") return;
-  button.dataset.footerBound = "true";
+    button.addEventListener("click", () => {
+      const isExpanded =
+        button.getAttribute("aria-expanded") === "true";
 
-  button.addEventListener("click", () => {
-    const isExpanded = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", String(!isExpanded));
+      content.hidden = isExpanded;
 
-    button.setAttribute("aria-expanded", String(!isExpanded));
-    content.hidden = isExpanded;
-
-    if (icon) {
-      icon.textContent = isExpanded ? "+" : "−";
-    }
-  });
-}
-
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initFooterDisclosure);
-} else {
-  initFooterDisclosure();
-}
-
-
+      if (icon) {
+        icon.textContent = isExpanded ? "+" : "−";
+      }
+    });
+  }
 
   /* 正文注释：电脑悬停展开，触屏设备点击展开 */
   const notes = document.querySelectorAll("[data-inline-note]");
@@ -41,7 +36,13 @@ if (document.readyState === "loading") {
     const trigger = note.querySelector(".inline-note__trigger");
     const noteContent = note.querySelector(".inline-note__content");
 
-    if (!trigger || !noteContent || trigger.dataset.noteInitialized) return;
+    if (
+      !trigger ||
+      !noteContent ||
+      trigger.dataset.noteInitialized === "true"
+    ) {
+      return;
+    }
 
     trigger.dataset.noteInitialized = "true";
 
@@ -63,14 +64,15 @@ if (document.readyState === "loading") {
       }
     };
 
+    // 触屏设备：点击展开或收起
     trigger.addEventListener("click", (event) => {
-      // 电脑端使用悬停交互，不再额外切换
       if (canHover.matches) return;
 
       event.preventDefault();
       toggle();
     });
 
+    // 电脑：悬停展开，移开收起
     note.addEventListener("mouseenter", () => {
       if (canHover.matches) open();
     });
@@ -79,6 +81,7 @@ if (document.readyState === "loading") {
       if (canHover.matches) close();
     });
 
+    // 按 Escape 收起注释
     note.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         close();
@@ -88,8 +91,12 @@ if (document.readyState === "loading") {
   });
 }
 
+/* 兼容脚本在 DOM 加载前后执行 */
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initializeFooterDisclosure);
+  document.addEventListener(
+    "DOMContentLoaded",
+    initializeFooterDisclosure
+  );
 } else {
   initializeFooterDisclosure();
 }
