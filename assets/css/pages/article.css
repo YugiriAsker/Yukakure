@@ -46,7 +46,6 @@
 }
 
 /* TOC */
-
 .page-toc {
   margin: 1rem 0 1.35rem;
   padding: 0.75rem 0.9rem;
@@ -64,6 +63,7 @@
 .page-toc ul,
 .page-toc ol {
   margin: 0;
+  list-style: none;
 }
 
 .page-toc ul,
