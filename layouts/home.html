@@ -66,31 +66,21 @@
 
 	{{ $posts := first 4 (where site.RegularPages "Section" "posts") }}
 
-	{{ if $posts }}
-		<div class="post-list">
-			{{ range $posts }}
-<a class="post-row" href="{{ .RelPermalink }}">
-<a class="post-row" href="{{ .RelPermalink }}">
-    <time class="post-row__date" datetime="{{ .Date.Format "2006-01-02" }}">
-        {{ .Date.Format "2006-01-02" }}
-    </time>
-    <span class="post-row__separator" aria-hidden="true">|</span>
-    <span class="post-row__title">{{ .Title }}</span>
-    <span class="post-row__arrow" aria-hidden="true">🐾</span>
-</a>
-
-    <time class="post-row__date" datetime="{{ .Date.Format "2006-01-02" }}">
-        {{ .Date.Format "2006-01-02" }}
-    </time>
-					<span class="post-row__separator" aria-hidden="true">|</span>
-<span class="post-row__title">{{ .Title }}</span>
-					<span class="post-row__arrow" aria-hidden="true">🐾</span>
-				</a>
-			{{ end }}
-		</div>
-	{{ else }}
-		<p class="empty-state">{{ i18n "no_posts" }}</p>
-	{{ end }}
+{{ if $posts }}
+    <div class="post-list">
+        {{ range $posts }}
+            <a class="post-row" href="{{ .RelPermalink }}">
+                <time class="post-row__date" datetime="{{ .Date.Format "2006-01-02" }}">
+                    {{ .Date.Format "2006-01-02" }}
+                </time>
+                <span class="post-row__separator" aria-hidden="true">|</span>
+                <span class="post-row__title">{{ .Title }}</span>
+            </a>
+        {{ end }}
+    </div>
+{{ else }}
+    <p class="empty-state">{{ i18n "no_posts" }}</p>
+{{ end }}
 </section>
 
 <section class="home-section home-projects" aria-labelledby="projects-title">
