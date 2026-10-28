@@ -343,3 +343,11 @@
     padding-right: 5px;
   }
 }
+
+/* 最近在：书写笔图标 */
+.home-posts .section-title__icon {
+  margin-right: 0.4em;
+  font-size: 0.9em;
+  vertical-align: 0.02em;
+  color: inherit;
+}

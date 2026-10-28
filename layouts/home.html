@@ -60,9 +60,10 @@
 {{ end }}
 
 <section class="home-section home-posts" aria-labelledby="latest-posts-title">
-	<h2 id="latest-posts-title" class="section-title section-title--pink">
-		{{ i18n "latest_posts" }}
-	</h2>
+<h2 id="latest-posts-title" class="section-title section-title--pink">
+    <i class="fa-solid fa-pen section-title__icon" aria-hidden="true"></i>
+    {{ i18n "latest_posts" }}
+</h2>
 
 	{{ $posts := first 4 (where site.RegularPages "Section" "posts") }}
 
