@@ -16,6 +16,7 @@
   margin: 0;
   color: var(--pink);
   font-family: "BaDingShiWeiTi 16", sans-serif;
+  font-family: "BaDingShiWeiTi16", "Noto Sans SC", sans-serif;
   font-size: clamp(2.4rem, 6vw, 4rem);
   line-height: 1;
   letter-spacing: -0.06em;

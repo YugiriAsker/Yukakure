@@ -2,6 +2,14 @@
 @import url("https://fontsapi.zeoseven.com/689/main/result.css");
 @import url("https://fontsapi.zeoseven.com/863/main/result.css");
 
+@font-face {
+  font-family: "BaDingShiWeiTi16";
+  src: url("/fonts/BaDingShiWeiTi16.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
