@@ -46,6 +46,7 @@
 }
 
 /* TOC */
+
 .page-toc {
   margin: 1rem 0 1.35rem;
   padding: 0.75rem 0.9rem;
@@ -63,7 +64,6 @@
 .page-toc ul,
 .page-toc ol {
   margin: 0;
-  list-style: none;
 }
 
 .page-toc ul,
@@ -309,5 +309,5 @@ html[data-theme="light"] .next-post:hover {
 /* Page 正文排版 */
 .page__content p {
   line-height: 1.7;
-  margin-bottom: 5em;
+  margin-bottom: 3.4em;
 }
