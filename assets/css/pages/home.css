@@ -336,15 +336,10 @@
 
 /* 手机端：首页指定区域轻微向内收 */
 @media (max-width: 640px) {
-  /* 个人站介绍 */
   .home-hero,
-
-  /* 最近在 */
   .home-section:has(.post-list),
-
-  /* 猫箱们 */
   .home-section:has(.node-list) {
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 4px;
+    padding-right: 4px;
   }
 }
