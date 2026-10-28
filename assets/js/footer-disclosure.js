@@ -1,24 +1,35 @@
 
-/* 在 DOM 就绪后初始化；如果 DOM 已经就绪，则立即执行 */
-function initializeFooterDisclosure() {
+/* 页脚展开与收起 */
+function initFooterDisclosure() {
   const button = document.querySelector(".site-footer__toggle");
   const content = document.querySelector("#site-footer-content");
   const icon = document.querySelector(".site-footer__toggle-icon");
 
-  if (button && content && !button.dataset.disclosureInitialized) {
-    button.dataset.disclosureInitialized = "true";
+  if (!button || !content) return;
 
-    button.addEventListener("click", () => {
-      const expanded = button.getAttribute("aria-expanded") === "true";
+  // 避免重复绑定事件
+  if (button.dataset.footerBound === "true") return;
+  button.dataset.footerBound = "true";
 
-      button.setAttribute("aria-expanded", String(!expanded));
-      content.hidden = expanded;
+  button.addEventListener("click", () => {
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
 
-      if (icon) {
-        icon.textContent = expanded ? "+" : "−";
-      }
-    });
-  }
+    button.setAttribute("aria-expanded", String(!isExpanded));
+    content.hidden = isExpanded;
+
+    if (icon) {
+      icon.textContent = isExpanded ? "+" : "−";
+    }
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initFooterDisclosure);
+} else {
+  initFooterDisclosure();
+}
+
+
 
   /* 正文注释：电脑悬停展开，触屏设备点击展开 */
   const notes = document.querySelectorAll("[data-inline-note]");
