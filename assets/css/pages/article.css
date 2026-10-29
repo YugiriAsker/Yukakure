@@ -89,11 +89,19 @@
   font-size: 0.92rem;
 }
 
-/* 文章正文段落间距 */
 .page__content p {
-  max-width: 78ch;
-  margin: 1.2rem 0; /* 👈 把原来的 0.55rem 改成 1.2rem（或者 1.5rem），间距就拉开了 */
-  line-height: 1.75; /* 👈 建议行高也稍微加大一点点（1.7 -> 1.75 或 1.8）看着更舒服 */
+  line-height: 1.75;     /* 你之前调的行高 */
+  margin: 1.2rem 0;      /* 你之前调的段落间距 */
+  
+  /* 👇 新增这三行：完美两端对齐 👇 */
+  text-align: justify;
+  text-justify: inter-ideograph; /* 针对中文优化，避免间距被拉得太大 */
+  word-break: break-word; /* 防止超长英文单词撑破布局 */
+}
+
+.page__content pre,
+.page__content code {
+  text-align: left;
 }
 
 .page__content h2,
