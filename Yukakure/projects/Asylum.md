@@ -1,7 +1,7 @@
 ---
 title: Asylum
 date: 2026-03-04
-description: 吃吃喝喝存档中……
+description: 现充中~
 icon: fa-solid fa-feather
 accent: cyan
 status: active
