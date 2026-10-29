@@ -87,3 +87,12 @@ other = "跳转到正文"
 
 [no_terms]
 other = "暂时还没有喵！"
+
+[previous_post]
+other = "上一篇"
+
+[next_post]
+other = "下一篇"
+
+[post_navigation]
+other = "文章导航"

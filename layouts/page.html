@@ -5,10 +5,8 @@
 {{ $dateHuman := .Date | time.Format "2006-01-02" }}
 {{ $postsPage := site.GetPage "/posts" }}
 
+{{ $prev := .PrevInSection }}
 {{ $next := .NextInSection }}
-{{ if not $next }}
-	{{ $next = .PrevInSection }}
-{{ end }}
 
 <article class="page {{ if $isPost }}page--post{{ end }}">
 	{{ if and $isPost $postsPage }}
@@ -105,22 +103,33 @@
 		{{ .Content }}
 	</div>
 
-	<footer class="page__footer">
-		{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-		{{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
-{{ if and $isPost $next }}
-	<a class="next-post" href="{{ $next.RelPermalink }}">
-		<span class="next-post__left" aria-hidden="true">←</span>
+<footer class="page__footer">
+	{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+	{{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
 
-		<span class="next-post__content">
-			<span class="next-post__label">{{ i18n "read_next" }}</span>
-			<span class="next-post__title">{{ $next.Title }}</span>
-		</span>
-
-		<span class="next-post__right" aria-hidden="true">→</span>
-	</a>
-{{ end }}
-	</footer>
+	{{ if and $isPost (or $prev $next) }}
+		<nav class="post-navigation" aria-label="文章导航">
+			{{ with $prev }}
+				<a class="next-post next-post--prev" href="{{ .RelPermalink }}">
+					<span class="next-post__left" aria-hidden="true">←</span>
+					<span class="next-post__content">
+						<span class="next-post__label">上一篇</span>
+						<span class="next-post__title">{{ .Title }}</span>
+					</span>
+				</a>
+			{{ end }}
+			{{ with $next }}
+				<a class="next-post next-post--next" href="{{ .RelPermalink }}">
+					<span class="next-post__content">
+						<span class="next-post__label">下一篇</span>
+						<span class="next-post__title">{{ .Title }}</span>
+					</span>
+					<span class="next-post__right" aria-hidden="true">→</span>
+				</a>
+			{{ end }}
+		</nav>
+	{{ end }}
+</footer>
 </article>
 
 {{ end }}
