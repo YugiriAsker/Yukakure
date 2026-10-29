@@ -107,26 +107,48 @@
 	{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 	{{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
 
-	{{ if and $isPost (or $prev $next) }}
-		<nav class="post-navigation" aria-label="文章导航">
+	{{/* 只要是在文章页，并且有上一篇或下一篇，就渲染导航（因为我们加了占位框，所以几乎是必渲染的） */}}
+	{{ if $isPost }}
+		<nav class="post-navigation" aria-label="{{ i18n "post_navigation" | default "文章导航" }}">
+			
+			{{/* 左侧：上一篇或占位 */}}
 			{{ with $prev }}
 				<a class="next-post next-post--prev" href="{{ .RelPermalink }}">
 					<span class="next-post__left" aria-hidden="true">←</span>
 					<span class="next-post__content">
-						<span class="next-post__label">上一篇</span>
+						<span class="next-post__label">{{ i18n "previous_post" | default "上一篇" }}</span>
 						<span class="next-post__title">{{ .Title }}</span>
 					</span>
 				</a>
+			{{ else }}
+				<div class="next-post next-post--prev next-post--empty">
+					<span class="next-post__left" aria-hidden="true">←</span>
+					<span class="next-post__content">
+						<span class="next-post__label">{{ i18n "previous_post" | default "上一篇" }}</span>
+						<span class="next-post__title">到头啦~</span>
+					</span>
+				</div>
 			{{ end }}
+
+			{{/* 右侧：下一篇或占位 */}}
 			{{ with $next }}
 				<a class="next-post next-post--next" href="{{ .RelPermalink }}">
 					<span class="next-post__content">
-						<span class="next-post__label">下一篇</span>
+						<span class="next-post__label">{{ i18n "next_post" | default "下一篇" }}</span>
 						<span class="next-post__title">{{ .Title }}</span>
 					</span>
 					<span class="next-post__right" aria-hidden="true">→</span>
 				</a>
+			{{ else }}
+				<div class="next-post next-post--next next-post--empty">
+					<span class="next-post__content">
+						<span class="next-post__label">{{ i18n "next_post" | default "下一篇" }}</span>
+						<span class="next-post__title">没有啦~</span>
+					</span>
+					<span class="next-post__right" aria-hidden="true">→</span>
+				</div>
 			{{ end }}
+
 		</nav>
 	{{ end }}
 </footer>
