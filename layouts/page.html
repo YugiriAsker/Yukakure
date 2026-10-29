@@ -5,9 +5,49 @@
 {{ $dateHuman := .Date | time.Format "2006-01-02" }}
 {{ $postsPage := site.GetPage "/posts" }}
 
-{{ $next := .NextInSection }}
-{{ if not $next }}
-	{{ $next = .PrevInSection }}
+{{ $prev := false }}
+{{ $next := false }}
+
+{{ if $isPost }}
+	{{ $currentCategories := .GetTerms "categories" }}
+
+	{{ $sameCategoryPosts := slice }}
+
+	{{ range where site.RegularPages "Section" "posts" }}
+		{{ $post := . }}
+		{{ $postCategories := $post.GetTerms "categories" }}
+
+		{{ if and (ne $post.RelPermalink $.RelPermalink) (gt (len $currentCategories) 0) }}
+			{{ range $postCategories }}
+				{{ $category := . }}
+				{{ range $currentCategories }}
+					{{ if eq .Name $category.Name }}
+						{{ $sameCategoryPosts = $sameCategoryPosts | append $post }}
+					{{ end }}
+				{{ end }}
+			{{ end }}
+		{{ end }}
+	{{ end }}
+
+	{{ $sameCategoryPosts = sort $sameCategoryPosts "Date" "desc" }}
+	{{ $currentIndex := -1 }}
+
+	{{ range $index, $post := $sameCategoryPosts }}
+		{{ if eq $post.RelPermalink $.RelPermalink }}
+			{{ $currentIndex = $index }}
+		{{ end }}
+	{{ end }}
+
+	{{ if ge $currentIndex 0 }}
+		{{ if gt $currentIndex 0 }}
+			{{ $prev = index $sameCategoryPosts (sub $currentIndex 1) }}
+		{{ end }}
+		{{ if lt (add $currentIndex 1) (len $sameCategoryPosts) }}
+			{{ $next = index $sameCategoryPosts (add $currentIndex 1) }}
+		{{ end }}
+	{{ else if gt (len $sameCategoryPosts) 0 }}
+		{{ $next = index $sameCategoryPosts 0 }}
+	{{ end }}
 {{ end }}
 
 <article class="page {{ if $isPost }}page--post{{ end }}">
@@ -108,17 +148,28 @@
 	<footer class="page__footer">
 		{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 		{{ partial "terms.html" (dict "taxonomy" "categories" "page" .) }}
-{{ if and $isPost $next }}
-	<a class="next-post" href="{{ $next.RelPermalink }}">
-		<span class="next-post__left" aria-hidden="true">←</span>
+{{ if $isPost }}
+	<nav class="post-navigation" aria-label="文章导航">
+		{{ with $prev }}
+			<a class="next-post next-post--prev" href="{{ .RelPermalink }}">
+				<span class="next-post__left" aria-hidden="true">←</span>
+				<span class="next-post__content">
+					<span class="next-post__label">上一篇</span>
+					<span class="next-post__title">{{ .Title }}</span>
+				</span>
+			</a>
+		{{ end }}
 
-		<span class="next-post__content">
-			<span class="next-post__label">{{ i18n "read_next" }}</span>
-			<span class="next-post__title">{{ $next.Title }}</span>
-		</span>
-
-		<span class="next-post__right" aria-hidden="true">→</span>
-	</a>
+		{{ with $next }}
+			<a class="next-post next-post--next" href="{{ .RelPermalink }}">
+				<span class="next-post__content">
+					<span class="next-post__label">接下来阅读</span>
+					<span class="next-post__title">{{ .Title }}</span>
+				</span>
+				<span class="next-post__right" aria-hidden="true">→</span>
+			</a>
+		{{ end }}
+	</nav>
 {{ end }}
 	</footer>
 </article>
