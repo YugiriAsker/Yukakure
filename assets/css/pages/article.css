@@ -309,5 +309,13 @@ html[data-theme="light"] .next-post:hover {
 /* Page 正文排版 */
 .page__content p {
   line-height: 1.7;
-  margin-bottom: 3.4em;
+  margin: 0.55rem 0;
+}
+
+/* 引用块：缩小上下间距 */
+.page__content blockquote {
+  margin: 0.8rem 0;
+  padding: 0.45rem 0 0.45rem 1rem;
+  border-left: 2px solid var(--cyan);
+  color: var(--muted-soft);
 }
