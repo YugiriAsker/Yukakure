@@ -362,6 +362,11 @@ html[data-theme="light"] .next-post:hover {
   overflow-wrap: anywhere;
 }
 
+/* 让左侧“上一篇”的文字靠右对齐，箭头依然在左边 */
+.next-post--prev .next-post__content {
+  text-align: right;
+}
+
 @media (max-width: 640px) {
   .post-navigation {
     grid-template-columns: minmax(0, 1fr);
