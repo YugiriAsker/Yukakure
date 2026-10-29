@@ -331,8 +331,9 @@ html[data-theme="light"] .next-post:hover {
   margin-top: 1.3rem;
 }
 
-.post-navigation > :only-child {
-  grid-column: 1 / -1;
+/* 单篇时保持原侧：下一篇靠右列 */
+.post-navigation .next-post--next:only-child {
+  grid-column: 2;
 }
 
 .post-navigation .next-post {
@@ -354,5 +355,9 @@ html[data-theme="light"] .next-post:hover {
 @media (max-width: 640px) {
   .post-navigation {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .post-navigation .next-post--next:only-child {
+    grid-column: auto;
   }
 }
