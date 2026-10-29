@@ -331,8 +331,17 @@ html[data-theme="light"] .next-post:hover {
   gap: 1rem;
   margin-top: 1.3rem;
 }
+
+/* 1. 删掉 `width: 100%`，改用下面这个方式让它自适应 */
 .post-navigation > * {
-  width: 100%;
+  min-width: 0; 
+}
+
+/* 2. 让里面的普通 div（占位框）和 a 标签高度绝对一致 */
+.post-navigation .next-post {
+  min-width: 0;
+  height: 100%; /* 👈 关键：强制等高 */
+  box-sizing: border-box; /* 👈 关键：防止边框把格子撑破 */
 }
 
 /* 单篇时保持原侧：下一篇靠右列 */
@@ -340,10 +349,7 @@ html[data-theme="light"] .next-post:hover {
   grid-column: 2;
 }
 
-.post-navigation .next-post {
-  min-width: 0;
-}
-
+/* 左右的网格内部对齐 */
 .next-post--prev {
   grid-template-columns: auto minmax(0, 1fr);
 }
