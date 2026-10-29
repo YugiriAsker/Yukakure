@@ -7,6 +7,6 @@ accent: cyan
 status: active
 tags:
   - Mastodon
-projectUrl: https://unstable.icu/home
+projectUrl: https://unstable.icu/@Asylum
 draft: false
 ---

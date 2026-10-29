@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/孟冬合该说梦话.md",
+                "file": "about.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "孟冬合该说梦话"
+              "title": "about"
             }
           }
         ]
@@ -187,15 +187,15 @@
   },
   "active": "e6946a804395fc68",
   "lastOpenFiles": [
-    "posts/是来哟.md",
+    "_index.md",
     "projects/Asylum.md",
+    "projects/ThinAir.md",
     "projects/Holy.md",
-    "projects/_index.md",
     "posts/孟冬合该说梦话.md",
+    "posts/是来哟.md",
+    "projects/_index.md",
     "posts/MUJI好歹物测评.md",
     "posts/_index.md",
-    "_index.md",
-    "projects/ThinAir.md",
     "about.md",
     "2026-10-26.md",
     "2026-05-10.md",
