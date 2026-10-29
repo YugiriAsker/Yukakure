@@ -331,6 +331,9 @@ html[data-theme="light"] .next-post:hover {
   gap: 1rem;
   margin-top: 1.3rem;
 }
+.post-navigation > * {
+  width: 100%;
+}
 
 /* 单篇时保持原侧：下一篇靠右列 */
 .post-navigation .next-post--next:only-child {
