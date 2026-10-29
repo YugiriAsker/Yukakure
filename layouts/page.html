@@ -9,45 +9,52 @@
 {{ $next := false }}
 
 {{ if $isPost }}
-	{{ $currentCategories := .GetTerms "categories" }}
+  {{ $current := . }}
+  {{ $currentCategories := .GetTerms "categories" }}
+  {{ $sameCategoryPosts := slice }}
 
-	{{ $sameCategoryPosts := slice }}
+  {{ range where site.RegularPages "Section" "posts" }}
+    {{ $post := . }}
+    {{ $matches := false }}
 
-	{{ range where site.RegularPages "Section" "posts" }}
-		{{ $post := . }}
-		{{ $postCategories := $post.GetTerms "categories" }}
+    {{ if eq $post.RelPermalink $current.RelPermalink }}
+      {{ $matches = true }}
+    {{ else }}
+      {{ $postCategories := $post.GetTerms "categories" }}
 
-		{{ if and (ne $post.RelPermalink $.RelPermalink) (gt (len $currentCategories) 0) }}
-			{{ range $postCategories }}
-				{{ $category := . }}
-				{{ range $currentCategories }}
-					{{ if eq .Name $category.Name }}
-						{{ $sameCategoryPosts = $sameCategoryPosts | append $post }}
-					{{ end }}
-				{{ end }}
-			{{ end }}
-		{{ end }}
-	{{ end }}
+      {{ range $postCategories }}
+        {{ $term := . }}
+        {{ range $currentCategories }}
+          {{ if eq .Name $term.Name }}
+            {{ $matches = true }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
 
-	{{ $sameCategoryPosts = sort $sameCategoryPosts "Date" "desc" }}
-	{{ $currentIndex := -1 }}
+    {{ if $matches }}
+      {{ $sameCategoryPosts = $sameCategoryPosts | append $post }}
+    {{ end }}
+  {{ end }}
 
-	{{ range $index, $post := $sameCategoryPosts }}
-		{{ if eq $post.RelPermalink $.RelPermalink }}
-			{{ $currentIndex = $index }}
-		{{ end }}
-	{{ end }}
+  {{ $sameCategoryPosts = sort $sameCategoryPosts "Date" "desc" }}
+  {{ $currentIndex := -1 }}
 
-	{{ if ge $currentIndex 0 }}
-		{{ if gt $currentIndex 0 }}
-			{{ $prev = index $sameCategoryPosts (sub $currentIndex 1) }}
-		{{ end }}
-		{{ if lt (add $currentIndex 1) (len $sameCategoryPosts) }}
-			{{ $next = index $sameCategoryPosts (add $currentIndex 1) }}
-		{{ end }}
-	{{ else if gt (len $sameCategoryPosts) 0 }}
-		{{ $next = index $sameCategoryPosts 0 }}
-	{{ end }}
+  {{ range $index, $post := $sameCategoryPosts }}
+    {{ if eq $post.RelPermalink $current.RelPermalink }}
+      {{ $currentIndex = $index }}
+    {{ end }}
+  {{ end }}
+
+  {{ if ge $currentIndex 0 }}
+    {{ if gt $currentIndex 0 }}
+      {{ $prev = index $sameCategoryPosts (sub $currentIndex 1) }}
+    {{ end }}
+
+    {{ if lt (add $currentIndex 1) (len $sameCategoryPosts) }}
+      {{ $next = index $sameCategoryPosts (add $currentIndex 1) }}
+    {{ end }}
+  {{ end }}
 {{ end }}
 
 <article class="page {{ if $isPost }}page--post{{ end }}">
