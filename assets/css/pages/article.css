@@ -221,11 +221,15 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 1rem;
-  margin-top: 1.3rem;
   padding: 0.85rem 1rem;
   border: 1px solid var(--line);
   color: var(--text);
   background: rgba(40, 42, 54, 0.16);
+}
+
+/* 独立使用时保留间距 */
+.next-post:not(.next-post--prev):not(.next-post--next) {
+  margin-top: 1.3rem;
 }
 
 .next-post:hover {
@@ -327,9 +331,12 @@ html[data-theme="light"] .next-post:hover {
   margin-top: 1.3rem;
 }
 
+.post-navigation > :only-child {
+  grid-column: 1 / -1;
+}
+
 .post-navigation .next-post {
   min-width: 0;
-  margin-top: 0;
 }
 
 .next-post--prev {
