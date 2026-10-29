@@ -367,17 +367,24 @@ html[data-theme="light"] .next-post:hover {
    文章底部：上一篇 / 下一篇 占位框
    ========================= */
 
+/* 保持和普通卡片一模一样的外观，但禁止鼠标交互 */
 .next-post--empty {
-  cursor: default; /* 鼠标放上去是默认箭头，而不是小手 */
-  opacity: 0.6;    /* 整体稍微变淡，显得不可用 */
+  cursor: default;
+  pointer-events: none; /* 彻底禁用鼠标悬停和点击 */
 }
 
-/* 让“到头啦~”和“没有啦~”的字体颜色变成灰色 */
+/* 保持原来的文字颜色（不置灰） */
 .next-post--empty .next-post__title {
-  color: var(--muted-soft);
+  color: var(--text); 
 }
 
-/* 禁用白天模式的 hover 背景提亮 */
+/* 覆盖暗色模式的 hover（保持原本的背景色） */
+.next-post--empty:hover {
+  border-color: var(--line);
+  background: rgba(40, 42, 54, 0.16);
+}
+
+/* 覆盖白天模式的 hover（保持白天模式原本的背景色） */
 html[data-theme="light"] .next-post--empty:hover {
-  background: rgba(255, 255, 255, 0.22); /* 恢复成它原本未悬停时的颜色 */
+  background: rgba(255, 255, 255, 0.22);
 }
