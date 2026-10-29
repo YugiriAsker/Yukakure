@@ -68,7 +68,8 @@
 
 .page-toc ul,
 .page-toc ol {
-  padding-left: 1.25rem;
+  padding-left: 1.25rem; /* 保留原本的缩进，用来体现层级 */
+  list-style: none;      /* 👈 新增这一行：干掉前面的数字和圆点 */
 }
 
 .page-toc li + li {
