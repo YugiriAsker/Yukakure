@@ -33,7 +33,7 @@
 <span>{{ $charCount }} {{ i18n "words" }}</span>
 
 				<span aria-hidden="true">//</span>
-				{{ $readingMinutes := div (add $charCount 599) 600 }}
+				{{ $readingMinutes := div (add $charCount 799) 800 }}
 {{ if lt $readingMinutes 1 }}
     {{ $readingMinutes = 1 }}
 {{ end }}
