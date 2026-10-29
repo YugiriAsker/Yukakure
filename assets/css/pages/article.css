@@ -318,4 +318,34 @@ html[data-theme="light"] .next-post:hover {
   padding: 0.45rem 0 0.45rem 1rem;
   border-left: 2px solid var(--cyan);
   color: var(--muted-soft);
+
+.post-navigation {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.3rem;
+}
+
+.post-navigation .next-post {
+  min-width: 0;
+  margin-top: 0;
+}
+
+.next-post--prev {
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.next-post--next {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.next-post__title {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .post-navigation {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 }
