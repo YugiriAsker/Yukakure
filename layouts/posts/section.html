@@ -104,7 +104,7 @@
 
 {{ $plainText := .Plain | plainify | replaceRE "\\s+" "" }}
 {{ $charCount := strings.RuneCount $plainText }}
-{{ $readingMinutes := div (add $charCount 399) 400 }}
+{{ $readingMinutes := div (add $charCount 599) 600 }}
 {{ if lt $readingMinutes 1 }}
     {{ $readingMinutes = 1 }}
 {{ end }}
