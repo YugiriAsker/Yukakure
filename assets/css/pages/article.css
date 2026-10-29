@@ -362,3 +362,22 @@ html[data-theme="light"] .next-post:hover {
     grid-column: auto;
   }
 }
+
+/* =========================
+   文章底部：上一篇 / 下一篇 占位框
+   ========================= */
+
+.next-post--empty {
+  cursor: default; /* 鼠标放上去是默认箭头，而不是小手 */
+  opacity: 0.6;    /* 整体稍微变淡，显得不可用 */
+}
+
+/* 让“到头啦~”和“没有啦~”的字体颜色变成灰色 */
+.next-post--empty .next-post__title {
+  color: var(--muted-soft);
+}
+
+/* 禁用白天模式的 hover 背景提亮 */
+html[data-theme="light"] .next-post--empty:hover {
+  background: rgba(255, 255, 255, 0.22); /* 恢复成它原本未悬停时的颜色 */
+}
