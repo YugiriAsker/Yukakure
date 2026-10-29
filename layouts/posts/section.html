@@ -10,7 +10,8 @@
     {{ $categoryNames = $categoryNames | append . }}
   {{ end }}
 {{ end }}
-{{ $categoryNames = sort (uniq $categoryNames) }}
+{{/* 将默认的 sort 替换为你想要的固定顺序 */}}
+{{ $categoryNames = slice "月历" "加刊" }}
 
 <section
   class="blog-page"
