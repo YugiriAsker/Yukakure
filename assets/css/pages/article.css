@@ -451,39 +451,58 @@ html[data-theme="light"] .next-post--empty:hover {
 }
 
 /* 使用 !important 强行覆盖你之前全局设置的 width: 100% */
+/* =========================
+   拍立得图片堆叠效果（重叠版）
+   ========================= */
+
+/* 容器：居中对齐 */
+.polaroid-stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+  padding: 1rem;
+}
+
+/* 基础图片样式（注意：去掉了宽度限制，交给各自控制） */
 .polaroid-stack img {
-  width: 45% !important; 
+  width: 45% !important; /* 宽度占 45%，留出重叠空间 */
   max-width: 280px !important;
   height: auto !important;
-  border: 8px solid #fff !important; /* 增加白边厚度，更像拍立得 */
-  border-bottom: 30px solid #fff !important; /* 底部留白，更有拍立得的感觉 */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+  border: 8px solid #fff !important; /* 拍立得白边 */
+  border-bottom: 30px solid #fff !important; /* 底部白边留长一点 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25) !important;
   transition: transform 0.3s ease, z-index 0.3s ease;
   position: relative;
   object-fit: cover;
-  /* 移除全局可能带的背景色 */
-  background: transparent !important; 
+  background: transparent !important;
 }
 
-/* 让它们互相重叠并倾斜 */
+/* 👇 核心：用负 margin 把它们拉到一起，并设置旋转 👇 */
+
+/* 第一张图：往左倾斜，往右靠 */
 .polaroid-stack img:nth-child(1) {
-  transform: rotate(-6deg) translateX(15px) translateY(5px);
+  transform: rotate(-6deg);
+  margin-right: -8%; /* 负数让它往右靠，吃掉右边图的空间 */
   z-index: 1;
 }
 
+/* 第二张图：往右倾斜，盖在第一张上面 */
 .polaroid-stack img:nth-child(2) {
-  transform: rotate(8deg) translateX(-15px) translateY(-5px);
+  transform: rotate(5deg);
   z-index: 2;
 }
 
+/* 第三张图（如果有的话）：往下移一点，盖在最上面 */
 .polaroid-stack img:nth-child(3) {
-  transform: rotate(-3deg) translateY(15px);
+  transform: rotate(-2deg) translateY(15px);
+  margin-left: -8%; /* 负数让它往左靠 */
   z-index: 3;
 }
 
-/* 鼠标悬停时卡片摆正并浮起 */
+/* 鼠标悬停时：摆正、浮起、盖住所有图片 */
 .polaroid-stack img:hover {
-  transform: scale(1.15) rotate(0deg) translateY(-10px) !important;
+  transform: scale(1.1) rotate(0deg) translateY(-10px) !important;
   z-index: 10;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3) !important;
 }
