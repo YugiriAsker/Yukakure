@@ -436,41 +436,61 @@ html[data-theme="light"] .next-post--empty:hover {
   }
 }
 
+/* =========================
+   拍立得图片堆叠效果
+   ========================= */
 .polaroid-stack {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0;
+  margin: 3rem 0;
   padding: 1rem;
+  /* 确保里面不会有其他边框干扰 */
+  border: none !important;
+  background: transparent !important;
 }
 
+/* 使用 !important 强行覆盖你之前全局设置的 width: 100% */
 .polaroid-stack img {
-  width: 45%; /* 控制图片大小 */
-  max-width: 300px;
-  border: 5px solid #fff; /* 拍立得白边 */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
+  width: 45% !important; 
+  max-width: 280px !important;
+  height: auto !important;
+  border: 8px solid #fff !important; /* 增加白边厚度，更像拍立得 */
+  border-bottom: 30px solid #fff !important; /* 底部留白，更有拍立得的感觉 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+  transition: transform 0.3s ease, z-index 0.3s ease;
   position: relative;
+  object-fit: cover;
+  /* 移除全局可能带的背景色 */
+  background: transparent !important; 
 }
 
 /* 让它们互相重叠并倾斜 */
 .polaroid-stack img:nth-child(1) {
-  transform: rotate(-5deg) translateX(10px);
+  transform: rotate(-6deg) translateX(15px) translateY(5px);
   z-index: 1;
 }
 
 .polaroid-stack img:nth-child(2) {
-  transform: rotate(5deg) translateX(-10px);
+  transform: rotate(8deg) translateX(-15px) translateY(-5px);
   z-index: 2;
 }
 
 .polaroid-stack img:nth-child(3) {
-  transform: rotate(-2deg) translateY(15px);
+  transform: rotate(-3deg) translateY(15px);
   z-index: 3;
 }
 
 /* 鼠标悬停时卡片摆正并浮起 */
 .polaroid-stack img:hover {
-  transform: scale(1.1) rotate(0deg);
+  transform: scale(1.15) rotate(0deg) translateY(-10px) !important;
   z-index: 10;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 手机端适配：手机屏幕小，把三张图缩小一点 */
+@media (max-width: 640px) {
+  .polaroid-stack img {
+    width: 50% !important;
+  }
 }
