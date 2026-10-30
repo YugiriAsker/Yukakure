@@ -1,9 +1,9 @@
 ---
 title: CPG08的广佛之旅
-date: 2026-10-31
+date: 2026-10-30
 description: 不是cp的repo吗怎么全是吃的？！
 tags:
-  - 部署相关
+  - CP特辑
 categories:
   - 加刊
 draft: false
