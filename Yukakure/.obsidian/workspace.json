@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "posts/CPG08的广佛之旅.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
@@ -187,9 +187,9 @@
   },
   "active": "e6946a804395fc68",
   "lastOpenFiles": [
-    "posts/MUJI好歹物测评.md",
     "posts/孟冬合该说梦话.md",
     "posts/CPG08的广佛之旅.md",
+    "posts/MUJI好歹物测评.md",
     "posts/是来哟.md",
     "posts/_index.md",
     "projects/ThinAir.md",
