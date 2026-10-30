@@ -316,8 +316,8 @@ html[data-theme="light"] .next-post:hover {
 /* 手机端：文章页面左右留白 */
 @media (max-width: 780px) {
   .page {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
 }
 
@@ -411,4 +411,27 @@ html[data-theme="light"] .next-post:hover {
 /* 覆盖白天模式的 hover（保持白天模式原本的背景色） */
 html[data-theme="light"] .next-post--empty:hover {
   background: rgba(255, 255, 255, 0.22);
+}
+
+/* 图片网格堆叠 */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 默认两列，改成 3 就是三列 */
+  gap: 0.5rem; /* 图片之间的间隙 */
+  margin: 1.5rem 0;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 保证图片填满格子且不变形 */
+  border-radius: 4px; /* 可选：加个圆角 */
+  border: 1px solid var(--line);
+}
+
+/* 手机端自动变成单列 */
+@media (max-width: 640px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
 }
