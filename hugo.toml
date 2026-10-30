@@ -104,3 +104,9 @@ description = "我在这里写下……"
 # name = "lab.example.org"
 # url = "https://lab.example.org"
 # description = "实验、原型与其他项目。"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
