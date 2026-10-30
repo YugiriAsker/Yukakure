@@ -435,3 +435,42 @@ html[data-theme="light"] .next-post--empty:hover {
     grid-template-columns: 1fr;
   }
 }
+
+.polaroid-stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 1rem;
+}
+
+.polaroid-stack img {
+  width: 45%; /* 控制图片大小 */
+  max-width: 300px;
+  border: 5px solid #fff; /* 拍立得白边 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+/* 让它们互相重叠并倾斜 */
+.polaroid-stack img:nth-child(1) {
+  transform: rotate(-5deg) translateX(10px);
+  z-index: 1;
+}
+
+.polaroid-stack img:nth-child(2) {
+  transform: rotate(5deg) translateX(-10px);
+  z-index: 2;
+}
+
+.polaroid-stack img:nth-child(3) {
+  transform: rotate(-2deg) translateY(15px);
+  z-index: 3;
+}
+
+/* 鼠标悬停时卡片摆正并浮起 */
+.polaroid-stack img:hover {
+  transform: scale(1.1) rotate(0deg);
+  z-index: 10;
+}
