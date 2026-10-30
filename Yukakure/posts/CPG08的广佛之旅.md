@@ -19,7 +19,7 @@ g08的消息出来时和主催讨论了一晚上到底要不要去，最后决�
 ## 布展日
 天气预报说这几天都会下雨，落地广州和主催汇合，坐地铁直奔早茶店**彩点**。结果遇到两大难题1地铁出口没有电梯（我已经很久没遇到这种事了所以完全没纳入提前预防的范围内）2是，外面在下雨……导航还给我们导错路了，要我们过天桥，最后又从斑马线走了回来。不过天桥有遮顶，在里面避了会儿雨出来就没下了，而且还因此等到了11点能吃上午市特惠～
 我们点了：红米肠、咸水角、虾饺、酱蒸凤爪、蒜蒸排骨、艇仔粥。
-<div class="polaroid-stack"><img src="https://https://cdn.jsdelivr.net/gh/YugiriAsker/YukakureImages/img/IMG_8831.JPEG.jpg" alt="咸水角、蒜蒸排骨、艇仔粥"><img src="https://https://cdn.jsdelivr.net/gh/YugiriAsker/YukakureImages/img/IMG_8830.JPEG.jpg" alt="红米肠、虾饺、酱蒸凤爪"></div>
+<div class="polaroid-stack"><img src="https://cdn.jsdelivr.net/gh/YugiriAsker/YukakureImages/img/IMG_8831.JPEG.jpg" alt="咸水角、蒜蒸排骨、艇仔粥"><img src="https://cdn.jsdelivr.net/gh/YugiriAsker/YukakureImages/img/IMG_8830.JPEG.jpg" alt="红米肠、虾饺、酱蒸凤爪"></div>
 
 本地朋友千酱说，你们点这么多两个人吃得完？！我们真的吃完了哦……
 虾饺凤爪蒸排骨都是经典款就不说了，红米肠我真的每次来广州都要狂吃。艇仔粥也非常美味，料很丰富，难以想象餐厅的粥竟然真的能每一勺都有料（后来发现广州都这样，我好嫉妒）……然后就是咸水角，本地朋友推荐的。这个好神奇哦，炸的，里面的馅是咸的，然后忘了（）好吃。但如果要选择的话我应该下次不会复购而是再尝尝别的！
