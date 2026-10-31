@@ -42,7 +42,8 @@ descriptionLines = [
 tagline = "你好，我是来，这是我的 [日常](/posts/) 与 [猫箱](/projects/) ♪︎"
 
 [languages.zh-cn.params.footer]
-text = '// 由 [Hugo](https://gohugo.io/) 驱动 // 使用 [Rewired](https://github.com/RigleGit/rewired) 主题'
+text = '''// 由 [Hugo](https://gohugo.io/) 驱动的 [Rewired](https://github.com/RigleGit/rewired) 主题
+// 使用 [八丁饰尾体 16](https://github.com/yzdnn/BaDingShiWeiTi-16) 为标题字体'''
 prompt = "yukakure:~$"
 
 [[languages.zh-cn.menus.main]]

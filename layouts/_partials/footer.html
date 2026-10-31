@@ -17,9 +17,17 @@
 	</button>
 
 	<div class="site-footer__meta" id="site-footer-content" hidden>
-		{{ with site.Params.footer.text }}
-			{{ . | markdownify }}
-		{{ else }}
+<!-- 渲染 text -->
+{{ with site.Params.footer.text }}
+    <div style="flex-basis: 100%; text-align: left; width: 100%; line-height: 1.8;">
+        {{/* 处理换行符 */}}
+        {{ $lines := split . "\n" }}
+        {{ range $lines }}
+            {{/* 对每一行分别进行 Markdown 解析，确保链接生效 */}}
+            <div>{{ . | markdownify }}</div>
+        {{ end }}
+    </div>
+{{ else }}
 			your web // hecho con ♥ y <a href="https://gohugo.io/">Hugo</a> // tema <a href="https://github.com/RigleGit/rewired">rewired</a>
 		{{ end }}
 	</div>
