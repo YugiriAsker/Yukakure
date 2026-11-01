@@ -519,18 +519,14 @@ html[data-theme="light"] .next-post--empty:hover {
    ========================= */
 .floating-actions {
   position: fixed !important; 
-  
-  /* 电脑端默认：贴正文右边缘，右下角 */
   bottom: 40px !important; 
   right: max(20px, calc(50% - 450px)) !important; 
   top: auto !important;
   left: auto !important;
-  
   z-index: 99999 !important;
   display: flex;
   flex-direction: column; 
   gap: 12px; 
-  
   opacity: 0 !important;
   visibility: hidden !important;
   transform: translateY(10px) !important; 
@@ -543,7 +539,7 @@ html[data-theme="light"] .next-post--empty:hover {
   transform: translateY(0) !important; 
 }
 
-/* 统一的按钮外观 */
+/* 统一的按钮外观（直角版） */
 .floating-action-btn {
   display: flex !important;
   align-items: center;
@@ -551,12 +547,12 @@ html[data-theme="light"] .next-post--empty:hover {
   width: 42px !important;
   height: 42px !important;
   padding: 0 !important;
-  background: rgba(40, 42, 54, 0.95) !important;
+  background: rgba(40, 42, 54, 0.96) !important; /* 深色模式按钮 */
   backdrop-filter: blur(4px) !important;
   border: 1px solid var(--line) !important;
   color: var(--text) !important;
   cursor: pointer !important;
-  border-radius: 6px !important;
+  border-radius: 0 !important; /* 👈 改为直角 */
   box-shadow: none !important;
   user-select: none !important;
   list-style: none !important;
@@ -576,7 +572,7 @@ html[data-theme="light"] .next-post--empty:hover {
   position: relative !important;
 }
 
-/* 电脑端：目录向左展开 */
+/* 电脑端：目录向左展开（直角版） */
 .floating-toc__content {
   position: absolute !important;
   bottom: 0 !important; 
@@ -590,14 +586,15 @@ html[data-theme="light"] .next-post--empty:hover {
   max-height: 60vh !important;
   overflow-y: auto !important;
   margin: 0 !important;
-  padding: 1rem !important;
-  background: rgba(40, 42, 54, 0.95) !important;
+  padding: 0.75rem 0.9rem !important; 
   border: 1px solid var(--line) !important;
-  border-radius: 4px !important;
+  border-radius: 0 !important; /* 👈 改为直角 */
   box-shadow: none !important; 
   text-align: left !important;
+  background: rgba(40, 42, 54, 0.96) !important; /* 深色模式面板 */
 }
 
+/* 目录列表排版 */
 .floating-toc__content .page-toc li + li {
   margin-top: 0.1rem !important;
 }
@@ -608,9 +605,13 @@ html[data-theme="light"] .next-post--empty:hover {
   margin-bottom: 0 !important;
 }
 
-html[data-theme="light"] .floating-action-btn,
+/* 浅色模式：统一指定颜色 */
 html[data-theme="light"] .floating-toc__content {
-  background: rgba(255, 255, 255, 0.95) !important;
+  background: rgba(248, 246, 239, 0.96) !important; 
+}
+
+html[data-theme="light"] .floating-action-btn {
+  background: rgba(248, 246, 239, 0.96) !important;
 }
 
 /* ==========================================
@@ -619,9 +620,6 @@ html[data-theme="light"] .floating-toc__content {
 @media (max-width: 1000px) {
   .floating-actions {
     bottom: 30px !important; 
-    
-    /* 👇 核心1：让图标和正文右边缘对齐 👇 */
-    /* 因为手机端正文有 1.2rem 的边距，所以这里用 calc 扣掉 */
     right: calc(1.2rem + 5px) !important; 
     left: auto !important;
     transform: translateY(10px) !important;
@@ -634,17 +632,11 @@ html[data-theme="light"] .floating-toc__content {
   .floating-toc__content {
     bottom: calc(100% + 12px) !important; 
     top: auto !important;
-    
-    /* 👇 核心2：让大框的右边缘，也贴紧图标右侧 👇 */
     right: 0 !important; 
     left: auto !important;
     transform: none !important; 
-    
-    /* 👇 宽度铺满可用空间，和正文一样宽 👇 */
     width: calc(100vw - 2.4rem) !important; 
     max-width: 400px !important;
-    
-    /* 👇 核心3：强力清理内部的排版错乱 👇 */
     padding: 0.75rem 0.9rem !important; 
     box-sizing: border-box !important;
     text-align: left !important;
