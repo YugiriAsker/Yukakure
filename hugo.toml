@@ -10,7 +10,6 @@ theme = "rewired"
 defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
 hasCJKLanguage = true
-enableRobotsTXT = true
 
 [markup.goldmark.renderer]
 hardWraps = true
