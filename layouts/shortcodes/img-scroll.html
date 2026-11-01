@@ -1,0 +1,20 @@
+<div class="image-scroll-wrapper">
+  {{ range split (.Get 0) "," }}
+    {{ $parts := split . "|" }}
+    {{ $src := index $parts 0 }}
+    {{ $caption := "" }}
+    {{ if gt (len $parts) 1 }}
+      {{ $caption = index $parts 1 }}
+    {{ end }}
+    
+    <div class="scroll-item">
+      <!-- 👇 新增：把图片和文字紧紧包裹在一个容器里 👇 -->
+      <div class="scroll-content">
+        <img src="{{ trim $src " " | safeURL }}" loading="lazy">
+        {{ if $caption }}
+          <div class="scroll-item-caption">{{ trim $caption " " }}</div>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</div>

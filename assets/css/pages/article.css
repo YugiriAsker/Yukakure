@@ -413,107 +413,6 @@ html[data-theme="light"] .next-post--empty:hover {
   background: rgba(255, 255, 255, 0.22);
 }
 
-/* 图片网格堆叠 */
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 默认两列，改成 3 就是三列 */
-  gap: 0.5rem; /* 图片之间的间隙 */
-  margin: 1.5rem 0;
-}
-
-.image-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 保证图片填满格子且不变形 */
-  border-radius: 4px; /* 可选：加个圆角 */
-  border: 1px solid var(--line);
-}
-
-/* 手机端自动变成单列 */
-@media (max-width: 640px) {
-  .image-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* =========================
-   拍立得图片堆叠效果
-   ========================= */
-.polaroid-stack {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem 0;
-  padding: 1rem;
-  /* 确保里面不会有其他边框干扰 */
-  border: none !important;
-  background: transparent !important;
-}
-
-/* 使用 !important 强行覆盖你之前全局设置的 width: 100% */
-/* =========================
-   拍立得图片堆叠效果（重叠版）
-   ========================= */
-
-/* 容器：居中对齐 */
-.polaroid-stack {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem 0;
-  padding: 1rem;
-}
-
-/* 基础图片样式（注意：去掉了宽度限制，交给各自控制） */
-.polaroid-stack img {
-  width: 45% !important; /* 宽度占 45%，留出重叠空间 */
-  max-width: 280px !important;
-  height: auto !important;
-  border: 8px solid #fff !important; /* 拍立得白边 */
-  border-bottom: 30px solid #fff !important; /* 底部白边留长一点 */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25) !important;
-  transition: transform 0.3s ease, z-index 0.3s ease;
-  position: relative;
-  object-fit: cover;
-  background: transparent !important;
-}
-
-/* 👇 核心：用负 margin 把它们拉到一起，并设置旋转 👇 */
-
-/* 第一张图：往左倾斜，往右靠 */
-.polaroid-stack img:nth-child(1) {
-  transform: rotate(-6deg);
-  margin-right: -8%; /* 负数让它往右靠，吃掉右边图的空间 */
-  z-index: 1;
-}
-
-/* 第二张图：往右倾斜，盖在第一张上面 */
-.polaroid-stack img:nth-child(2) {
-  transform: rotate(5deg);
-  z-index: 2;
-}
-
-/* 第三张图（如果有的话）：往下移一点，盖在最上面 */
-.polaroid-stack img:nth-child(3) {
-  transform: rotate(-2deg) translateY(15px);
-  margin-left: -8%; /* 负数让它往左靠 */
-  z-index: 3;
-}
-
-/* 鼠标悬停时：摆正、浮起、盖住所有图片 */
-.polaroid-stack img:hover {
-  transform: scale(1.1) rotate(0deg) translateY(-10px) !important;
-  z-index: 10;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3) !important;
-}
-
-/* 手机端适配：手机屏幕小，把三张图缩小一点 */
-@media (max-width: 640px) {
-  .polaroid-stack img {
-    width: 50% !important;
-  }
-}
-
 /* =========================
    悬浮操作区 (返回顶部 + 目录)
    ========================= */
@@ -649,5 +548,156 @@ html[data-theme="light"] .floating-action-btn {
     text-align: left !important;
     margin-left: 0 !important;
     padding-left: 1.25rem !important;
+  }
+}
+
+
+/* =========================
+   图片轮播 (Swiper)
+   ========================= */
+.swiper-container {
+    max-width: 820px;
+    margin: 2em auto;
+    /* 给整个容器加个边框或背景，融入你的终端风格 */
+    border: 1px solid var(--line);
+    background: rgba(40, 42, 54, 0.22);
+    padding: 10px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background-color: transparent; /* 让背景透明，露出页面的底色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    margin: 0 !important;
+    /* 👇 限制视觉大小 👇 */
+    max-width: 100% !important; 
+    max-height: 400px !important; /* 限制最高高度，防止太长的图撑破屏幕 */
+    object-fit: contain !important; /* 保证图片按比例缩放，不被拉伸变形 */
+    border: 1px solid var(--line); 
+}
+
+/* 修改分页小圆点的颜色，让它符合你的主题色 */
+.swiper-pagination-bullet-active {
+    background: var(--pink) !important;
+}
+
+/* 浅色模式适配 */
+html[data-theme="light"] .swiper-container {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+/* =========================
+   横向滑动画廊 (收紧底部间距版)
+   ========================= */
+
+/* 1. 滑动大容器 */
+.image-scroll-wrapper {
+  display: flex !important;
+  flex-wrap: nowrap !important; 
+  overflow-x: auto !important; 
+  overflow-y: hidden !important; 
+  gap: 15px !important; 
+  margin: 1.5rem 0 !important;
+  padding-bottom: 8px !important; 
+  
+  /* 👇 靠左对齐（超出时的基准） 👇 */
+  justify-content: flex-start !important; 
+  align-items: flex-start !important; 
+  -webkit-overflow-scrolling: touch;
+
+  /* 隐藏原生滚动条 */
+  scrollbar-width: none !important; 
+  -ms-overflow-style: none !important; 
+}
+.image-scroll-wrapper::-webkit-scrollbar { 
+  display: none !important; 
+}
+
+/* 👇 核心魔法：给里面的子元素加上水平自动外边距 👇 */
+/* 当图片没铺满时：第一个图的左边距和最后一个图的右边距会平分剩余空间，实现完美居中 */
+/* 当图片铺满时：剩余空间为0，自动变成靠左排列，随便滑 */
+.image-scroll-wrapper > .scroll-item:first-child {
+  margin-left: auto !important;
+}
+.image-scroll-wrapper > .scroll-item:last-child {
+  margin-right: auto !important;
+}
+/* 2. 单个图片外框 */
+.scroll-item {
+  flex: 0 0 auto !important;
+  display: flex;
+  align-items: center; 
+}
+
+/* 只有包含了文字的图，才锁定 400px 高度 */
+.scroll-item:has(.scroll-item-caption) {
+  height: 400px !important; 
+  /* 👇 去掉了这里的 padding-bottom 👇 */
+}
+
+/* 3. 内部包裹层 */
+.scroll-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* 4. 图片自适应 */
+.scroll-item img {
+  height: auto !important;
+  width: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  border: 1px solid var(--line);
+  display: block !important;
+}
+
+/* 👇 只有带文字的图片，限制高度给文字让位（把 90% 改成了 92%，让图片稍微大一点） 👇 */
+.scroll-item:has(.scroll-item-caption) img {
+  max-height: 92% !important; 
+}
+
+/* 没有文字的图片，高度拉满 */
+.scroll-item:not(:has(.scroll-item-caption)) img {
+  max-height: 400px !important; 
+}
+
+/* 5. 备注文字 */
+.scroll-item-caption {
+  font-size: 0.85rem !important;
+  color: var(--muted-soft) !important;
+  text-align: center !important;
+  /* 👇 文字上边距改为 4px，更紧凑 👇 */
+  margin-top: 4px !important; 
+  line-height: 1.2 !important;
+  max-width: 100%;
+  flex-shrink: 0; 
+  white-space: nowrap; 
+}
+
+/* 隐藏原生滚动条，保留滑动功能 */
+.image-scroll-wrapper {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE/Edge */
+}
+.image-scroll-wrapper::-webkit-scrollbar { 
+  display: none !important; /* Chrome/Safari */
+}
+
+/* 手机端适配 */
+@media (max-width: 640px) {
+  .scroll-item:has(.scroll-item-caption) {
+    height: 250px !important; 
+  }
+  .scroll-item:not(:has(.scroll-item-caption)) img {
+    max-height: 250px !important; 
   }
 }

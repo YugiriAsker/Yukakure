@@ -187,6 +187,18 @@
 
     let lastScrollY = window.scrollY; // 初始化滚动位置
 
+ // 👇👇👇 新增的图片横向滑动代码，加在这里 👇👇👇
+    const scrollWrappers = document.querySelectorAll('.image-scroll-wrapper');
+    scrollWrappers.forEach(wrapper => {
+      wrapper.addEventListener('wheel', function(e) {
+        // 阻止页面默认的上下滚动
+        e.preventDefault();
+        // 将垂直滚动转换为横向滚动（除以 1.5 让速度平滑一点）
+        this.scrollLeft += (e.deltaY / 1.5);
+      }, { passive: false }); // passive: false 必须有，否则 preventDefault 不生效
+    });
+    // 👆👆👆 图片横向滑动代码结束 👆👆👆
+
     if (inlineToc && floatingToc) {
       const tocBottom = inlineToc.offsetTop + inlineToc.offsetHeight;
 

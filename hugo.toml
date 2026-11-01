@@ -19,6 +19,7 @@ category = "categories"
 
 [params]
 blogPageSize = 5
+enableimgloop = true
 
 [params.toc]
 enabled = true
