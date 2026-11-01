@@ -181,6 +181,7 @@
     const inlineToc = document.getElementById("inline-toc");
     const floatingToc = document.getElementById("floating-toc");
     const backToTop = document.getElementById("back-to-top");
+    const tocDetails = document.querySelector(".floating-toc-details"); // 获取悬浮目录的 details 元素
 
     if (inlineToc && floatingToc) {
       const tocBottom = inlineToc.offsetTop + inlineToc.offsetHeight;
@@ -191,6 +192,8 @@
           floatingToc.classList.add("is-visible");
         } else {
           floatingToc.classList.remove("is-visible");
+          // 如果按钮隐藏了，顺便把展开的目录也收起来
+          if (tocDetails) tocDetails.removeAttribute("open");
         }
       });
 
@@ -199,10 +202,21 @@
         backToTop.addEventListener("click", function () {
           window.scrollTo({
             top: 0,
-            behavior: "smooth" // 平滑滚动
+            behavior: "smooth"
           });
         });
       }
+
+      // 👇 新增核心逻辑：点击页面其他空白处，自动收起目录 👇
+      document.addEventListener("click", function (event) {
+        // 如果目录当前是打开的
+        if (tocDetails && tocDetails.hasAttribute("open")) {
+          // 如果点击的目标，不在 details 容器内部
+          if (!tocDetails.contains(event.target)) {
+            tocDetails.removeAttribute("open"); // 强行关掉它
+          }
+        }
+      });
     }
   });
 </script>
