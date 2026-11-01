@@ -90,13 +90,27 @@
 	{{ $tocHTML := .Fragments.ToHTML $tocStartLevel $tocEndLevel $tocOrdered }}
 
 	{{ if and $isPost $tocEnabled (in (printf "%s" $tocHTML) "<li") }}
-		<aside class="page-toc" aria-labelledby="page-toc-title">
+		<!-- 1. 原本的完整目录（保持不动） -->
+		<aside class="page-toc" id="inline-toc" aria-labelledby="page-toc-title">
 			<h2 id="page-toc-title" class="page-toc__title">
 				{{ i18n "contents" }}
 			</h2>
-
 			{{ $tocHTML }}
 		</aside>
+
+		<!-- 2. 新增的迷你悬浮目录按钮 -->
+		<details class="floating-toc" id="floating-toc">
+			<summary class="floating-toc__btn">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px; vertical-align: middle;"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+				目录
+			</summary>
+			<div class="floating-toc__content page-toc" style="text-align: left;">
+				<h2 class="page-toc__title" style="margin-bottom: 0.8rem; text-align: left;">{{ i18n "contents" }}</h2>
+				<div style="text-align: left;">
+					{{ $tocHTML }}
+				</div>
+			</div>
+		</details>
 	{{ end }}
 
 	<div class="page__content">
@@ -153,5 +167,26 @@
 	{{ end }}
 </footer>
 </article>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const inlineToc = document.getElementById("inline-toc");
+    const floatingToc = document.getElementById("floating-toc");
+
+    if (inlineToc && floatingToc) {
+      // 计算大目录距离页面顶部的高度
+      const tocBottom = inlineToc.offsetTop + inlineToc.offsetHeight;
+
+      window.addEventListener("scroll", function () {
+        // 当滚动的距离超过了目录底部，就显示悬浮按钮
+        if (window.scrollY > tocBottom) {
+          floatingToc.classList.add("is-visible");
+        } else {
+          floatingToc.classList.remove("is-visible");
+        }
+      });
+    }
+  });
+</script>
 
 {{ end }}
