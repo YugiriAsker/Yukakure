@@ -6,7 +6,7 @@ tags:
   - CP特辑
 categories:
   - 加刊
-draft: true
+draft: false
 ---
 想起来写一下cpg08的repo吧，其实懒得写，但主要是最近大难临头所以给自己找点事做而且不写的话我的记忆会越来越模糊。。
 
