@@ -614,20 +614,20 @@ html[data-theme="light"] .floating-toc__content {
 }
 
 /* ==========================================
-   手机端专属重写：贴底居中
+   手机端专属：图标靠右下角，面板居中
    ========================================== */
 @media (max-width: 1000px) {
   .floating-actions {
-    bottom: 30px !important; /* 贴底，距离底部 30px */
+    bottom: 30px !important; 
     
-    /* 居中对齐魔法 */
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) translateY(10px) !important;
+    /* 👇 图标保持靠右 👇 */
+    right: 20px !important; 
+    left: auto !important;
+    transform: translateY(10px) !important;
   }
   
   .floating-actions.is-visible {
-    transform: translateX(-50%) translateY(0) !important;
+    transform: translateY(0) !important;
   }
 
   /* 手机端目录框：在按钮正上方弹出，并居中 */
@@ -635,12 +635,13 @@ html[data-theme="light"] .floating-toc__content {
     bottom: calc(100% + 12px) !important; /* 放在按钮上面 */
     top: auto !important;
     
+    /* 👇 面板居中 👇 */
     left: 50% !important;
     right: auto !important;
-    transform: translateX(-50%) !important; /* 水平居中 */
+    transform: translateX(-50%) !important; 
     
-    /* 手机端宽度占屏幕90% */
-    width: 90vw !important;
-    max-width: 340px !important;
+    /* 👇 宽度与正文对齐（跟原版一样宽） 👇 */
+    width: calc(100vw - 2.4rem) !important; /* 减去左右两侧留白 */
+    max-width: 100% !important;
   }
 }
