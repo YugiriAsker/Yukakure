@@ -1,0 +1,18 @@
+media:
+  input: static/images
+  output: /images
+
+content:
+  - name: posts
+    label: 文章
+    type: collection
+    path: content/posts
+    filename: '{year}-{month}-{day}-{fields.title}.md'
+    fields:
+      - { name: title, label: 标题, type: string, required: true }
+      - { name: date, label: 日期, type: date }
+      - { name: description, label: 描述, type: string }
+      - { name: tags, label: 标签, type: string, list: true }       # 👈 对应你的 tags
+      - { name: categories, label: 分类, type: string, list: true } # 👈 对应你的 categories
+      - { name: draft, label: 草稿, type: boolean, default: false }
+      - { name: body, label: 正文, type: rich-text }

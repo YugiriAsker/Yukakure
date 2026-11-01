@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/CPG08的广佛之旅.md",
-                "mode": "preview",
+                "file": "posts/是来哟.md",
+                "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "CPG08的广佛之旅"
+              "title": "是来哟"
             }
           }
         ]
@@ -187,13 +187,13 @@
   },
   "active": "e6946a804395fc68",
   "lastOpenFiles": [
-    "posts/代码存储.md",
+    "posts/孟冬合该说梦话.md",
     "posts/CPG08的广佛之旅.md",
+    "posts/代码存储.md",
     "posts/MUJI好歹物测评.md",
     "posts/是来哟.md",
     "未命名.md",
     "未命名",
-    "posts/孟冬合该说梦话.md",
     "about.md",
     "posts/_index.md",
     "projects/_index.md",
