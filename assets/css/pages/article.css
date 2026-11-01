@@ -614,14 +614,12 @@ html[data-theme="light"] .floating-toc__content {
 }
 
 /* ==========================================
-   手机端专属：图标靠右下角，面板居中
+   手机端专属：图标靠右下角，面板居中且半透明
    ========================================== */
 @media (max-width: 1000px) {
   .floating-actions {
     bottom: 30px !important; 
-    
-    /* 👇 图标保持靠右 👇 */
-    right: 20px !important; 
+    right: 20px !important; /* 图标依然靠右下角 */
     left: auto !important;
     transform: translateY(10px) !important;
   }
@@ -630,18 +628,22 @@ html[data-theme="light"] .floating-toc__content {
     transform: translateY(0) !important;
   }
 
-  /* 手机端目录框：在按钮正上方弹出，并居中 */
+  /* 手机端目录框：在按钮正上方弹出，居中 */
   .floating-toc__content {
-    bottom: calc(100% + 12px) !important; /* 放在按钮上面 */
+    bottom: calc(100% + 12px) !important; 
     top: auto !important;
     
-    /* 👇 面板居中 👇 */
+    /* 居中 */
     left: 50% !important;
     right: auto !important;
     transform: translateX(-50%) !important; 
     
-    /* 👇 宽度与正文对齐（跟原版一样宽） 👇 */
-    width: calc(100vw - 2.4rem) !important; /* 减去左右两侧留白 */
+    /* 宽度与正文对齐 */
+    width: calc(100vw - 2.4rem) !important; 
     max-width: 100% !important;
+    
+    /* 👇 关键修复：清除之前可能导致文字错位的 padding 或 margin 👇 */
+    box-sizing: border-box !important; 
+    padding: 0.75rem 0.9rem !important; /* 用回你最原始的 padding */
   }
 }
