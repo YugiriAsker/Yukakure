@@ -17,7 +17,6 @@
 
 	<header class="page__header">
 		<h1 class="page__title">{{ .Title }}</h1>
-
 		{{ if $isPost }}
 			<div class="page__meta">
 				{{ with site.Params.author }}
@@ -181,20 +180,42 @@
     const inlineToc = document.getElementById("inline-toc");
     const floatingToc = document.getElementById("floating-toc");
     const backToTop = document.getElementById("back-to-top");
-    const tocDetails = document.querySelector(".floating-toc-details"); // 获取悬浮目录的 details 元素
+    const tocDetails = document.querySelector(".floating-toc-details");
+    
+    // 👇 核心修改：精确获取网页最外层的导航栏，排除文章里的 <header> 👇
+    const siteHeader = document.querySelector("body > header, body > .site-header");
+
+    let lastScrollY = window.scrollY; // 初始化滚动位置
 
     if (inlineToc && floatingToc) {
       const tocBottom = inlineToc.offsetTop + inlineToc.offsetHeight;
 
+      // 合并滚动监听事件
       window.addEventListener("scroll", function () {
-        // 控制悬浮按钮组的显示/隐藏
-        if (window.scrollY > tocBottom) {
+        const currentScrollY = window.scrollY;
+
+        // 1. 控制悬浮目录按钮的显示/隐藏
+        if (currentScrollY > tocBottom) {
           floatingToc.classList.add("is-visible");
         } else {
           floatingToc.classList.remove("is-visible");
-          // 如果按钮隐藏了，顺便把展开的目录也收起来
           if (tocDetails) tocDetails.removeAttribute("open");
         }
+
+        // 2. 控制页头显示/隐藏
+        if (siteHeader) {
+          // 如果往下滚动，并且大于 50px（避免轻微抖动）
+          if (currentScrollY > lastScrollY && currentScrollY > 50) {
+            siteHeader.classList.add("header-hidden");
+          } 
+          // 如果往上滚动
+          else if (currentScrollY < lastScrollY) {
+            siteHeader.classList.remove("header-hidden");
+          }
+        }
+
+        // 更新滚动位置供下次判断
+        lastScrollY = currentScrollY;
       });
 
       // 回到顶部点击事件
@@ -204,16 +225,16 @@
             top: 0,
             behavior: "smooth"
           });
+          // 回到顶部时，顺便把页头显示出来
+          if (siteHeader) siteHeader.classList.remove("header-hidden");
         });
       }
 
-      // 👇 新增核心逻辑：点击页面其他空白处，自动收起目录 👇
+      // 点击页面其他空白处，自动收起目录
       document.addEventListener("click", function (event) {
-        // 如果目录当前是打开的
         if (tocDetails && tocDetails.hasAttribute("open")) {
-          // 如果点击的目标，不在 details 容器内部
           if (!tocDetails.contains(event.target)) {
-            tocDetails.removeAttribute("open"); // 强行关掉它
+            tocDetails.removeAttribute("open");
           }
         }
       });
